@@ -30,15 +30,3 @@ set_technology = {
 }
 add_ideas = EPM_military_army_chaos
 add_ideas = EPM_no_country
-recruit_character = EPM_lazume_aus_lotia
-recruit_character = EPM_empire_leader
-recruit_character = EPM_kare_grateq
-recruit_character = EPM_fisumia_fotima
-recruit_character = EPM_won_su_gung
-recruit_character = EPM_daka_gumia
-recruit_character = EPM_nomi_forti
-recruit_character = EPM_blue_bunny
-recruit_character = EPM_fendia
-recruit_character = EPM_political
-recruit_character = EPM_political2
-recruit_character = EPM_political3
