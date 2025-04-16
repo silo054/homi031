@@ -1,4 +1,4 @@
-capital = 902
+capital = 4180
 
 oob = "EPM_1936"
 
@@ -9,7 +9,7 @@ set_politics ={
     elections_allowed =no 
 }
 set_popularities ={
-    neutrality =100
+    neutrality = 100
     
 } 
 set_technology = {
