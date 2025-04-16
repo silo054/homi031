@@ -1,0 +1,44 @@
+capital = 902
+
+oob = "EPM_1936"
+
+set_politics ={
+    ruling_party = neutrality
+    last_election = "1936.1.1"
+    election_frequency = 48
+    elections_allowed =no 
+}
+set_popularities ={
+    neutrality =100
+    
+} 
+set_technology = {
+    infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	paratroopers = 1
+	gw_artillery = 1
+	nuclear_reactor = 1
+	mass_assault = 1
+	fleet_in_being = 1
+
+}
+add_ideas = EPM_military_army_chaos
+add_ideas = EPM_no_country
+recruit_character = EPM_lazume_aus_lotia
+recruit_character = EPM_empire_leader
+recruit_character = EPM_kare_grateq
+recruit_character = EPM_fisumia_fotima
+recruit_character = EPM_won_su_gung
+recruit_character = EPM_daka_gumia
+recruit_character = EPM_nomi_forti
+recruit_character = EPM_blue_bunny
+recruit_character = EPM_fendia
+recruit_character = EPM_political
+recruit_character = EPM_political2
+recruit_character = EPM_political3
