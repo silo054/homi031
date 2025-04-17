@@ -6,11 +6,11 @@ EMP = {
 }
 
 GER = {
-	color = HSV { 0.1 0.15 0.4 }
+	color = HSV { 249 199 33 }
 	color_ui = rgb { 249 199 33 }
 }
 ENG = {
-	color = rgb { 201 56 93 }
+	color = rgb { 195 39 39 }
 	color_ui = rgb { 195 39 39 }
 }
 SOV = {
