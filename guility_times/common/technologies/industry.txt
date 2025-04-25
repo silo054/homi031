@@ -58,7 +58,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = industry_folder
-			position = { x = 12 y = 0 }
+			position = { x = 10 y = 0 }
 		}
 		
 		ai_will_do = {
@@ -74,7 +74,7 @@ technologies = {
 			cat_production
 		}
 	}
-	magic_machine_tools2 = {
+	magic_basic_machine_tools2 = {
 	
 		production_factory_max_efficiency_factor = 0.15
 		local_resources_factor = 0.15
@@ -83,32 +83,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = industry_folder
-			position = { x = 11 y = 1 }
-		}
-		
-		ai_will_do = {
-			factor = 15
-						
-			modifier = {
-				factor = 10
-				date > "1936.1.1"
-			}
-		}
-		categories = {
-			industry
-			cat_production
-		}
-	}
-	magic_machine_tools3 = {
-	
-		production_factory_max_efficiency_factor = 0.15
-		local_resources_factor = 0.15
-		
-		research_cost = 1.5
-		start_year = 1936
-		folder = {
-			name = industry_folder
-			position = { x = 13 y = 2 }
+			position = { x = 10 y = 0 }
 		}
 		
 		ai_will_do = {

@@ -1,0 +1,110 @@
+add_namespace = EMP_event
+
+country_event = {
+    id = EMP_event.1
+    title = EMP_event.1.title
+    desc = EMP_event.1.description
+
+    fire_only_once = yes
+
+    trigger = {
+        has_completed_focus = EMP_start
+    }
+
+    option = {
+        name = EMP_event.1.a
+        add_ideas = EPM_Chaos
+    }
+}
+
+country_event = {
+    id = EMP_event.2
+    title = EMP_event.2.title
+    desc = EMP_event.2.description
+
+    fire_only_once = yes
+
+    trigger = {
+        has_completed_focus = EMP_grate
+    }
+
+    option = {
+        name = EMP_event.2.a
+        complete_national_focus = EMP_three_king
+    }
+
+    option = {
+        name = EMP_event.2.b
+        complete_national_focus = EMP_empeier
+    }
+}
+
+country_event = {
+    id = EMP_event.3
+    title = EMP_event.3.title
+    desc = EMP_event.3.description
+    
+    fire_only_once = yes
+
+    trigger = {
+        has_completed_focus = EMP_grate_king_condition
+    }
+
+    option = {
+        name = EMP_event.3.a
+        complete_national_focus = EMP_grate_king_condition3
+        custom_effect_tooltip = EMP_event.3.a.TT
+    }
+
+    option = {
+        name = EMP_event.3.b
+        complete_national_focus = EMP_grate_king_condition2
+        custom_effect_tooltip = EMP_event.3.b.TT
+    }
+
+    option = {
+        name = EMP_event.3.c
+        complete_national_focus = EMP_grate_king_condition1
+        custom_effect_tooltip = EMP_event.3.c.TT
+    }
+}
+
+country_event = {
+    id = EMP_event.4
+    title = EMP_event.4.title
+    desc = EMP_event.4.description
+
+    fire_only_once = yes
+
+    trigger = {
+        has_completed_focus = EMP_empeier20
+    }
+
+    option = {
+        name = EMP_event.4.a
+		create_faction = "제국지구침공군"
+    }
+}
+country_event = {
+    id = EMP_event.5
+    title = EMP_event.5.title
+    desc = EMP_event.5.description
+
+    is_triggered_only = yes
+ 	
+    option = {
+	    name = EMP_event.5.a
+	    ai_chance = { 
+            factor = 95
+	    }
+	    GER = { add_to_faction = EPM }
+    }
+
+    option = {
+	    name = EMP_event.5.b
+	    ai_chance = { 
+            factor = 5
+        }
+    }
+}
+### ###

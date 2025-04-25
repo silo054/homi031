@@ -1,0 +1,88 @@
+EPM_condition_decision_category1 = {
+	icon = GFX_decision_category_generic
+	allowed = {
+		tag = EPM
+	}
+	
+	priority = 17
+	
+	visible = {
+		has_completed_focus = EMP_grate_king_condition1
+	}
+
+	visible_when_empty = yes
+}
+EPM_condition_decision_category2 = {
+	icon = GFX_decision_category_generic
+	allowed = {
+		tag = EPM
+	}
+	
+	priority = 17
+	
+	visible = {
+		has_completed_focus = EMP_grate_king_condition2
+	}
+
+	visible_when_empty = yes
+}EPM_condition_decision_category3 = {
+	icon = GFX_decision_category_generic
+	allowed = {
+		tag = EPM
+	}
+	
+	priority = 17
+	
+	visible = {
+		has_completed_focus = EMP_grate_king_condition3
+	}
+	
+
+	visible_when_empty = yes
+}EPM_condition_decision_category_newwourld = {
+	icon = GFX_decision_category_generic
+	allowed = {
+		tag = EPM
+	}
+	
+	priority = 17
+	
+	visible = {
+		has_completed_focus = EMP_grate_king_condition3
+	}
+	
+
+	visible_when_empty = yes
+}EPM_condition_decision_category_army = {
+	icon = GFX_decision_category_generic
+	allowed = {
+		tag = EPM
+	}
+	
+	priority = 17
+	
+	visible = {
+		has_completed_focus = EMP_grate_king_condition3
+	}
+	
+
+	visible_when_empty = yes
+}
+EPM_condition_decision_category_economy = {
+	icon = GFX_decision_category_generic
+	allowed = {
+		tag = EPM
+	}
+	
+	priority = 17
+	
+	visible = {
+		
+		has_completed_focus = EMP_grate_king_industry_goverment_policy
+		
+	}
+	
+
+	visible_when_empty = yes
+}
+

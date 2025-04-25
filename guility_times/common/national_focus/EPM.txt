@@ -1,0 +1,4428 @@
+focus_tree = {
+
+	id = REPLACE_ME
+
+	country = {
+
+		factor = 0
+
+		modifier = {
+
+			add = 10
+
+			tag = EPM
+
+		}
+
+	}
+
+	default = no
+
+	focus = {
+
+		id = EMP_start
+
+		icon = GFX_focus_BRA_utilize_security_law
+
+		cost = 5.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			
+			add_political_power = 100
+
+			EPM = {
+				country_event = {
+					id = EMP_event.1
+				}
+			}
+
+		}
+		
+
+		available_if_capitulated = yes
+
+		
+
+		x = 0
+
+		y = 0
+
+	}
+
+	focus = {
+
+		id = EMP_continue
+
+		icon = GFX_focus_generic_military_mission
+
+		cost = 10.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+		prerequisite = { focus = EMP_start }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		
+
+		available_if_capitulated = yes
+
+		
+
+		x = 3
+
+		y = 0
+
+		
+
+		completion_reward = {
+
+			
+
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 80000
+				producer = EPM
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 1600
+				producer = EPM
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 800
+				producer = EPM
+			}
+			set_technology = { infantry_weapons1 = 1 }
+			set_technology = { infantry_weapons2 = 1 }
+			set_technology = { artillery1 = 1 }
+			set_technology = { support_weapons = 1}
+			
+			
+		}
+		
+	
+}
+
+	focus = {
+
+		id = EMP_end
+
+		icon = GFX_goal_panzerwaffe
+
+		cost = 5.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_continue }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 3
+
+		y = 2
+
+		
+
+		completion_reward = {
+
+			add_manpower = 3000
+
+		}
+
+	}
+	focus = {
+
+		id = EMP_real_end
+
+		icon = GFX_focus_generic_navy_battleship2
+
+		cost = 5.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_end }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 0
+
+		y = 2
+
+		
+
+		completion_reward = {
+
+			set_state_owner = 900
+			set_state_controller = 900
+			set_state_owner = 558
+			set_state_controller = 558
+			set_state_owner = 776
+			set_state_controller = 776
+		
+
+			
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate
+
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 5.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = { has_completed_focus = EMP_real_end }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 40
+
+		y = 0
+
+		
+
+		completion_reward = {
+			add_political_power = 10
+			swap_ideas = {
+				remove_idea = EPM_Chaos
+				add_idea = EPM_ganlow_choas
+			}
+				remove_ideas = EPM_no_country
+			EPM = {
+				country_event = {
+					id = EMP_event.2
+				}
+			}
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate_king
+
+		icon = GFX_goal_generic_intelligence_exchange
+
+		cost = 5.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_grate }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 34
+
+		y = 2
+
+		
+
+		completion_reward = {
+			add_political_power = 100
+			
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate_king_start
+
+		icon = GFX_focus_generic_self_management
+
+		cost = 5.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_three_king }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 34
+
+		y = 3.5
+
+		
+
+		completion_reward = {
+			
+			add_state_core = 900
+			add_state_core = 558 
+			add_state_core = 776
+		}
+
+	}
+	
+	focus = {
+
+		id = EMP_three_king
+
+		icon = GFX_goal_generic_intelligence_exchange
+
+		cost = 5.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		available = {
+			always = no
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_grate }
+
+		available_if_capitulated = yes
+
+		mutually_exclusive ={ focus = EMP_empeier }
+
+		x = 34
+
+		y = 2
+
+		
+
+		completion_reward = {
+			
+				set_politics = {
+					ruling_party = oligarchism
+					elections_allowed = no
+					last_election = "1935.12.17"
+					election_frequency = 48
+					long_name = "제국 귀족회"
+					name = "귀족회"
+				}
+		
+		
+			retire_character = EPM_empire_leader
+			add_country_leader_role = {
+				character = EPM_lazume_aus_lotia
+				promote_leader = yes
+				country_leader = {
+					ideology = oligarchism
+					expire = "1965.1.1.1"
+					traits = { war_industrialist }
+				}
+			}
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate_king_reasearch
+
+		icon = GFX_goal_tfv_generic_tech_sharing
+
+		cost = 5.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_three_king }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 32.5
+
+		y = 3.5
+
+		
+
+		completion_reward = {
+			
+			add_research_slot = 1
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate_king_industry
+
+		icon = GFX_goal_continuous_repairments
+
+		cost = 5.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_three_king }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 36
+
+		y = 3.5
+
+		
+
+		completion_reward = {
+			
+			add_offsite_building = {
+				type = arms_factory
+				level = 3
+			}
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate_king_morden
+
+		icon = GFX_goal_generic_improve_relations
+
+		cost = 10.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_grate_king_industry }
+		prerequisite = { focus = EMP_grate_king_start }
+		prerequisite = { focus = EMP_grate_king_reasearch }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 34
+
+		y = 5
+
+		
+
+		completion_reward = {
+			
+			remove_ideas ={EPM_Chaos}
+			
+		}
+
+
+	}
+	focus = {
+
+		id = EMP_grate_king_mod
+
+		icon = GFX_SOV_reinstitute_the_mestnichestvo_ccp_2d_sov_compatibility
+
+		cost = 5.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_grate_king_morden }
+	
+
+		available_if_capitulated = yes
+
+		
+
+		x = 34
+
+		y = 6.5
+
+		
+
+		completion_reward = {
+			add_ideas = EPM_manpower
+			
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate_king_modi
+
+		icon = GFX_focus_generic_diplomatic_treaty
+
+		cost = 8.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_grate_king_morden }
+	
+
+		available_if_capitulated = yes
+
+		
+
+		x = 37
+
+		y = 5
+
+		
+
+		completion_reward = {
+			remove_ideas = {EPM_ganlow_choas}
+			add_ideas = {EPM_ganlow_less}
+			
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate_king_modiew
+
+		icon = GFX_goal_tripartite_pact
+
+		cost = 8.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_grate_king_modi }
+		available = { has_completed_focus = EMP_grate_king_army}
+
+		available_if_capitulated = yes
+
+		
+
+		x = 37
+
+		y = 6.5
+
+		
+
+		completion_reward = {
+			
+			 remove_ideas = {EPM_ganlow_lessofless}
+		}
+
+	}focus = {
+
+		id = EMP_grate_king_modiek
+
+		icon = GFX_focus_generic_improve_the_administration
+
+		cost = 8.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_grate_king_modiew }
+	
+
+		available_if_capitulated = yes
+
+		
+
+		x = 37
+
+		y = 8
+
+		
+
+		completion_reward = {
+			add_ideas = {EPM_ganlow_feture}
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate_king_modiea
+
+		icon = GFX_SOV_an_adaptable_army_ccp_2d_sov_compatibility
+
+		cost = 8.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_grate_king_morden }
+	
+
+		available_if_capitulated = yes
+
+		
+
+		x = 31.5
+
+		y = 5
+
+		
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+
+	}
+		focus = {
+
+		id = EMP_grate_king_army
+
+		icon = GFX_focus_SOV_builder_of_the_red_army
+
+		cost = 8.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_grate_king_modiea }
+	
+
+		available_if_capitulated = yes
+
+		
+
+		x = 31.5
+
+		y = 6.5
+
+		
+
+		completion_reward = {
+			
+			remove_ideas ={ EPM_ganlow_less}
+			add_ideas = {EPM_ganlow_lessofless}
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate_king_army_desty
+
+		icon = GFX_focus_GER_army
+
+		cost = 8.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_grate_king_army }
+	
+
+		available_if_capitulated = yes
+
+		
+
+		x = 31.5
+
+		y = 8
+
+		
+
+		completion_reward = {
+			
+			add_ideas = {EPM_grate_army}
+
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate_king_re_empire
+
+		icon = GFX_SOV_romanov_reconstruction_ccp_2d_sov_compatibility
+
+		cost = 5.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_grate_king_army_desty }
+		prerequisite = { focus = EMP_grate_king_modiek }
+		prerequisite = { focus = EMP_grate_king_mod }
+		available_if_capitulated = yes
+
+		
+
+		x = 34
+		y = 8
+
+		
+
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+			}
+
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate_king_start_war
+
+		icon = GFX_focus_jap_strike_south
+
+		cost = 10.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_grate_king_re_empire }
+		
+
+		available_if_capitulated = yes
+
+		
+
+		x = 34
+		y = 9.5
+
+		
+
+		completion_reward = {
+			
+
+
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate_king_asia_war
+
+		icon = GFX_focus_usa_focus_on_asia
+
+		cost = 7.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_grate_king_start_war }
+		
+
+		available_if_capitulated = yes
+
+		
+
+		x = 36
+		y = 9.5
+
+		
+
+		completion_reward = {
+			
+			create_wargoal = {
+					type = take_state_focus
+					target = chi
+					expire = 0
+					generator = { 676 291 }
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = jap
+					expire = 0
+					generator = { 676 291 }
+				}
+
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate_king_europe_war
+
+		icon = GFX_focus_usa_focus_on_europe
+
+		cost = 7.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_grate_king_start_war }
+		
+
+		available_if_capitulated = yes
+
+		
+
+		x = 32.5
+		y = 9.5
+
+		
+
+		completion_reward = {
+			
+				create_wargoal = {
+					type = take_state_focus
+					target = fra
+					expire = 0
+					generator = { 676 291 }
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = eng
+					expire = 0
+					generator = { 676 291 }
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = ita
+					expire = 0
+					generator = { 676 291 }
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = ger
+					expire = 0
+					generator = { 676 291 }
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = sov
+					expire = 0
+					generator = { 676 291 }
+				}
+
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate_king_america
+
+		icon = GFX_focus_spa_the_war_of_vengeance
+
+		cost = 7.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_grate_king_start_war }
+		
+
+		available_if_capitulated = yes
+
+		
+
+		x = 34
+		y = 11
+
+		
+
+		completion_reward = {
+			
+							create_wargoal = {
+					type = take_state_focus
+					target = usa
+					expire = 0
+					generator = { 676 291 }
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = Mex
+					expire = 0
+					generator = { 676 291 }
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = can
+					expire = 0
+					generator = { 676 291 }
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = bra
+					expire = 0
+					generator = { 676 291 }
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = arg
+					expire = 0
+					generator = { 676 291 }
+				}
+
+		}
+
+	}focus = {
+
+		id = EMP_grate_king_condition
+
+		icon = GFX_focus_TUR_the_sun_language_theory
+
+		cost = 9.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_grate_king_america }
+		
+
+		available_if_capitulated = yes
+
+		
+
+		x = 34
+		y = 12.5
+
+		
+
+		completion_reward = {
+			EPM = {
+				country_event = {
+					id = EMP_event.3
+				}
+			}
+		}
+
+	}
+		focus = {
+
+		id = EMP_grate_king_condition1
+
+		icon = GFX_focus_ITA_ministry_of_italian_africa
+
+		cost = 9.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_grate_king_condition }
+		mutually_exclusive ={ focus = EMP_grate_king_condition2 }
+		mutually_exclusive ={ focus = EMP_grate_king_condition3 }
+		available_if_capitulated = yes
+
+		
+
+		x = 32.5
+		y = 11.7
+
+		
+
+		completion_reward = {
+			
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate_king_condition2
+
+		icon = GFX_focus_spa_strengthen_the_supreme_reality_of_spain
+
+		cost = 9.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_grate_king_condition }
+
+		available_if_capitulated = yes
+
+		mutually_exclusive ={ focus = EMP_grate_king_condition1 }
+		mutually_exclusive ={ focus = EMP_grate_king_condition3 }
+
+		x = 36
+		y = 11.7
+
+		
+
+		completion_reward = {
+		
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate_king_condition3
+
+		icon = GFX_focus_usa_focus_on_asia
+
+		cost = 9.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		prerequisite = { focus = EMP_grate_king_condition }
+
+		available_if_capitulated = yes
+		mutually_exclusive ={ focus = EMP_grate_king_condition1 }
+		mutually_exclusive ={ focus = EMP_grate_king_condition2 }
+		
+
+		x = 34
+		y = 13.5
+
+		
+
+		completion_reward = {
+			
+		}
+
+	}
+			focus = {
+
+		id = EMP_grate_king_industry_land1
+
+		icon = GFX_goal_generic_intelligence_exchange
+
+		cost = 5.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = EMP_grate_king_industry_land }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 12
+		y = 1.5
+
+		
+
+		completion_reward = {
+			
+		558 = { set_state_category = town }
+		900 = { set_state_category = town }
+
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate_king_industry_goverment_policy
+
+		icon = GFX_goal_generic_intelligence_exchange
+
+		cost = 5.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = EMP_grate_king_industry_land }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 12
+		y = 3
+
+		
+
+		completion_reward = {
+			
+		}
+
+	}
+				focus = {
+
+		id = EMP_grate_king_industry_land
+
+		icon = GFX_focus_generic_industry_2
+
+		cost = 10.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = { has_completed_focus = EMP_grate }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 12
+		y = 0
+
+		
+
+		completion_reward = {
+		558 = {
+					add_building_construction = {
+						type = naval_base
+						level = 3
+						province = 2050
+						instant_build = yes
+					}
+				}
+		}
+
+	}
+				focus = {
+
+		id = EMP_grate_king_industry_land2
+
+		icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
+
+		cost = 6.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = EMP_grate_king_industry_land }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 20
+		y = 1.5
+
+		
+
+		completion_reward = {
+			
+			
+
+		}
+
+	}
+					focus = {
+
+		id = EMP_grate_king_industry_land3
+
+		icon = GFX_goal_generic_construct_mil_factory
+
+		cost = 10.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = EMP_grate_king_industry_land2 }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 20
+		y = 3
+
+		
+
+		completion_reward = {
+			
+			
+			
+			
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+			}
+
+		}
+
+	}
+						focus = {
+
+		id = EMP_grate_king_infanty_less #보병장비 생산비용 낮추는거
+
+		icon = GFX_goal_generic_production2
+
+		cost = 7.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = EMP_grate_king_industry_land2 }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 22
+		y = 3
+
+		
+
+		completion_reward = {
+			
+			add_equipment_bonus = {
+				name = GER_all_terrain_military_motorcycle
+				bonus = {
+					infantry_equipment 
+						
+					 = {
+						build_cost_ic = -0.25
+					}
+				}
+			}
+
+
+
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate_king_artiy_less #포병장비 생산비용 낮추는거
+
+		icon = GFX_focus_SMB_mountain_guns
+
+		cost = 7.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = EMP_grate_king_industry_land2 }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 18
+		y = 3
+
+		
+
+		completion_reward = {
+			
+			
+			add_equipment_bonus = {
+				name = GER_all_terrain_military_motorcycle
+				bonus = {
+					artillery_equipment = 
+						
+					 {
+						build_cost_ic = -0.25
+					}
+				}
+			}
+
+
+		}
+
+	}
+		focus = {
+
+		id = EMP_grate_king_tank_less #전차 생산비용 낮추는거
+
+		icon = GFX_focus_generic_license_production
+
+		cost = 7.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = EMP_grate_king_industry_land2 }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 18
+		y = 4.5
+
+		
+
+		completion_reward = {
+			add_equipment_bonus = {
+				name = GER_all_terrain_military_motorcycle
+				bonus = {
+					medium_tank_aa_chassis  = {
+						build_cost_ic = -0.25
+					}
+				}
+			}
+		}
+
+	}
+		focus = {
+
+		id = EMP_grate_king_suport_less #지원장비 생산비용 낮추는거
+
+		icon = GFX_goal_generic_small_arms
+
+		cost = 7.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus =EMP_grate_king_infanty_less }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 22
+		y = 4.5
+
+		
+
+		completion_reward = {
+			
+			add_equipment_bonus = {
+				name = GER_all_terrain_military_motorcycle
+				bonus = {
+					support_equipment = 
+						
+					 {
+						build_cost_ic = -0.25
+					}
+				}
+			}
+
+
+
+		}
+
+	}
+			focus = {
+
+		id = EMP_grate_king_research2 
+
+		icon = GFX_SOV_the_ussr_academy_of_sciences_ccp_2d_sov_compatibility
+
+		cost = 10.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = EMP_grate_king_industry_land3 }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 20
+		y = 4.5
+
+		
+
+		completion_reward = {
+			
+			
+			add_research_slot = 1
+
+
+		}
+
+	}
+				focus = {
+
+		id = EMP_grate_king_land4
+
+		icon = GFX_goal_generic_soviet_construction
+
+		cost = 10.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = EMP_grate_king_research2  }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 20
+		y = 6
+
+		
+
+		completion_reward = {
+			
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 6
+				instant_build = yes
+			}
+			}
+			
+
+
+		}
+
+	}
+					focus = {
+
+		id = EMP_grate_king_factory
+
+		icon = GFX_focus_SOV_organize_wreckers
+
+		cost = 5.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = EMP_grate_king_industry_land1 }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 10
+		y = 3
+
+		
+
+		completion_reward = {
+			
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		}
+
+	}
+						focus = {
+
+		id = EMP_grate_king_factory2
+
+		icon = GFX_SOV_increase_state_reserves_ccp_2d_sov_compatibility
+
+		cost = 5.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = EMP_grate_king_industry_land1 }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 14
+		y = 3
+
+		
+
+		completion_reward = {
+			
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}}
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+			}
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+			}
+			}
+			}
+
+		
+	
+
+	
+							focus = {
+
+		id = EMP_grate_king_factory3
+
+		icon = GFX_focus_SOV_organize_wreckers
+
+		cost = 5.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = EMP_grate_king_factory9 }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 10
+		y = 4.5
+
+		
+
+		completion_reward = {
+			
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate_king_factory9
+
+		icon = GFX_focus_SOV_organize_wreckers
+
+		cost = 5.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = EMP_grate_king_industry_land1 }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 10
+		y = 3
+
+		
+
+		completion_reward = {
+			
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		}
+
+	}
+							focus = {
+
+		id = EMP_grate_king_factory4
+
+		icon = GFX_SOV_increase_state_reserves_ccp_2d_sov_compatibility
+
+		cost = 5.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = EMP_grate_king_factory2 }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 14
+		y = 4.5
+
+		
+
+		completion_reward = {
+			
+			
+						random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+			}
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+			}
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+			}
+
+		}
+
+	}
+							focus = {
+
+		id = EMP_grate_king_factory7
+
+		icon = GFX_focus_NORDIC_com_research
+
+		cost = 10.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = EMP_grate_king_industry_land1 }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 12
+		y = 3
+
+		
+
+		completion_reward = {
+			
+			
+			add_research_slot = 1
+		}
+
+	}
+		focus = {
+
+		id = EMP_grate_king_factory6
+
+		icon = GFX_focus_generic_currency_reforms
+
+		cost = 10.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = EMP_grate_king_factory3 }
+		prerequisite = { focus = EMP_grate_king_factory4 }
+		prerequisite = { focus = EMP_grate_king_factory7 }
+
+		available_if_capitulated = yes
+
+		
+
+		x = 12
+		y = 6
+
+		
+
+		completion_reward = {
+			
+			remove_ideas ={ EPM_industry_dead}
+			add_ideas ={ EPM_industry_heal}
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate_king_factory8
+
+		icon = GFX_focus_POL_warsaw_main_station
+
+		cost = 10.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = EMP_grate_king_factory6 }
+		
+
+		available_if_capitulated = yes
+
+		
+
+		x = 14
+		y = 7
+
+		
+
+		completion_reward = {
+				build_railway = {
+					path = { 8021 10820 }
+				}
+				901 ={add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 0820
+					instant_build = yes
+				}
+			}
+			build_railway = {
+				path = {1891 2056}
+			}
+			781 ={add_building_construction = {
+				type = supply_node
+				level = 1
+				province = 2056
+				instant_build = yes
+			}
+		}
+
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate_king_factory10
+
+		icon = GFX_focus_generic_currency_reforms
+
+		cost = 10.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = EMP_grate_king_factory6 }
+		
+
+		available_if_capitulated = yes
+
+		
+
+		x = 10
+		y = 7
+
+		
+
+		completion_reward = {
+			random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate_king_factory
+
+		icon = GFX_goal_continuous_non_factory_construct
+
+		cost = 10.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = EMP_grate_king_factory6 }
+		
+
+		available_if_capitulated = yes
+
+		
+
+		x = 12
+		y = 7
+
+		
+
+		completion_reward = {
+			add_ideas = EPM_empire_building
+
+		}
+
+	}
+	focus = {
+
+		id = EMP_grate_king_factory7
+
+		icon = GFX_focus_generic_steel
+
+		cost = 10.00
+
+		ai_will_do = {
+
+			factor = 10
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		prerequisite = { focus = EMP_grate_king_factory6 }
+		
+
+		available_if_capitulated = yes
+
+		
+
+		x = 12
+		y = 8.2
+
+		
+
+		completion_reward = {
+					set_technology ={
+						empires_resource = 1
+					}
+
+		}
+
+	}
+
+focus = {
+	id = EMP_empeier_army
+	icon = GFX_focus_GER_army
+	cost = 10
+	x = 16
+	y = 10
+
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+		always = yes
+	}
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { 
+		
+		army_experience = 15
+	}
+}
+focus = {
+	id = EMP_empeier_army_equipment
+	icon = GFX_focus_GER_army
+	cost = 10
+	x = 16
+	y = 12
+	prerequisite = { focus = EMP_empeier_army }
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+		always = yes
+	}
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { 
+		set_technology = {
+			empires_magic_artiality = 1
+		}
+		set_technology = {
+			empires_magic_infinity = 1
+		}
+		
+	}
+}
+focus = {
+	id = EMP_empeier_army_speed
+	icon = GFX_SOV_the_glory_of_the_red_army_alt_ccp_2d_sov_compatibility
+	cost = 4
+	x = 20
+	y = 11
+
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+		always = yes
+	}
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { 
+		swap_ideas = {
+			remove_idea = EPM_military_army_chaos
+			add_idea = EPM_military_army_chaos1
+		}
+	}
+	prerequisite = { focus = EMP_empeier_army }
+	mutually_exclusive ={ focus = EMP_empeier_army_allgun }
+}
+focus = {
+	id = EMP_empeier_army_speed1
+	icon = GFX_SOV_great_commander_ccp_2d_sov_compatibility
+	cost = 7
+	x = 21
+	y = 12
+
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+		always = yes
+	}
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { 
+		if = {
+			limit = { has_completed_focus = EMP_empeier_army_allgun1
+		} 
+		
+		remove_ideas = EPM_military_army_chaos2
+
+	}
+		else = {
+			swap_ideas = {
+				remove_idea = EPM_military_army_chaos1
+				add_idea = EPM_military_army_chaos2
+			}
+		}
+	}
+	prerequisite = { focus = EMP_empeier_army_speed }
+}
+focus = {
+	id = EMP_empeier_army_speed2
+	icon = GFX_focus_AUS_raid_military_storages
+	cost = 7
+	x = 19
+	y = 12
+
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+		always = yes
+	}
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { if = {
+		limit = { has_completed_focus = EMP_empeier_army_allgun1
+	} 
+	
+	remove_ideas = EPM_military_army_chaos2
+
+}
+	else = {
+		swap_ideas = {
+			remove_idea = EPM_military_army_chaos1
+			add_idea = EPM_military_army_chaos3
+		}
+	}
+
+	}
+	prerequisite = { focus = EMP_empeier_army_speed }
+}
+focus = {
+	id = EMP_empeier_army_speed3
+	icon = GFX_focus_generic_army_tanks2
+	cost = 7
+	x = 20
+	y = 13
+
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+		always = yes
+	}
+	
+
+	completion_reward = { 
+		if = {
+			limit = { has_completed_focus = EMP_empeier_army_speed5 }
+		    add_ideas = EPM_military_army_speed_of_speed1
+		}
+		else_if = {
+			limit ={has_completed_focus = EMP_empeier_army_speed4 }
+			add_ideas = EPM_military_army_speed_of_defence_and_attack
+		}
+		else_if = {
+			limit ={has_completed_focus = EMP_empeier_army_speed4 }
+			limit ={has_completed_focus = EMP_empeier_army_speed5 }
+			add_ideas = EPM_military_army_speed
+		}
+		else = {
+			add_ideas = EPM_military_army_speed_of_defence
+		}
+	}
+	prerequisite = { focus = EMP_empeier_army_speed1 }
+	prerequisite = { focus = EMP_empeier_army_speed2 }
+}
+focus = {
+	id = EMP_empeier_army_speed4
+	icon = GFX_focus_generic_heavy_tank
+	cost = 7
+	x = 22
+	y = 13
+
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+		always = yes
+	}
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { 
+		if = {
+			limit = { has_completed_focus = EMP_empeier_army_speed5 }
+		    add_ideas = EPM_military_army_speed_of_speed2
+		}
+		else_if = {
+			limit ={has_completed_focus = EMP_empeier_army_speed3 }
+			add_ideas = EPM_military_army_speed_of_defence_and_attack
+		}
+		else_if = {
+			limit ={has_completed_focus = EMP_empeier_army_speed4 }
+			limit ={has_completed_focus = EMP_empeier_army_speed5 }
+			add_ideas = EPM_military_army_speed
+		}
+		else = {
+			add_ideas = EPM_military_army_speed_of_attack
+		}
+	}
+	prerequisite = { focus = EMP_empeier_army_speed1 }
+	prerequisite = { focus = EMP_empeier_army_speed2 }
+}
+focus = {
+	id = EMP_empeier_army_speed5
+	icon = GFX_focus_generic_tank_assault
+	cost = 7
+	x = 18
+	y = 13
+
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+		always = yes
+	}
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { 
+		if = {
+			limit = { has_completed_focus = EMP_empeier_army_speed4 }
+		    add_ideas = EPM_military_army_speed_of_speed1
+		}
+		else_if = {
+			limit ={has_completed_focus = EMP_empeier_army_speed3 }
+			add_ideas = EPM_military_army_speed_of_speed1
+		}
+		else_if = {
+			limit ={has_completed_focus = EMP_empeier_army_speed4 }
+			limit ={has_completed_focus = EMP_empeier_army_speed3 }
+			add_ideas = EPM_military_army_speed
+		}
+		else = {
+			add_ideas = EPM_military_army_speed_of_speed
+		}
+	}
+	prerequisite = { focus = EMP_empeier_army_speed1 }
+	prerequisite = { focus = EMP_empeier_army_speed2 }
+}
+focus = {
+	id = EMP_empeier_army_speed6
+	icon = GFX_SOV_the_glory_of_the_red_army_alt_ccp_2d_sov_compatibility
+	cost = 7
+	x = 20
+	y = 15
+
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+		always = yes
+	}
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { 
+
+	}
+	prerequisite = { focus = EMP_empeier_army_speed5 }
+	prerequisite = { focus = EMP_empeier_army_speed3 }
+	prerequisite = { focus = EMP_empeier_army_speed4 }
+}
+focus = {
+	id = EMP_empeier_army_allgun
+	icon = GFX_SOV_soviet_artillery_ccp_2d_sov_compatibility
+	cost = 4
+	x = 12
+	y = 11
+
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+		always = yes
+	}
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { 
+		swap_ideas = {
+			remove_idea = EPM_military_army_chaos
+			add_idea = EPM_military_army_chaos1
+		}
+	}
+	prerequisite = { focus = EMP_empeier_army }
+	mutually_exclusive ={ focus = EMP_empeier_army_speed }
+}
+focus = {
+	id = EMP_empeier_army_allgun1
+	icon =GFX_SOV_great_commander_ccp_2d_sov_compatibility
+	cost = 7
+	x = 13
+	y = 12
+
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+		always = yes
+	}
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { 
+		if = {
+			limit = { has_completed_focus = EMP_empeier_army_allgun2
+		} 
+		
+		remove_ideas = EPM_military_army_chaos3
+
+	}
+		else = {
+			swap_ideas = {
+				remove_idea = EPM_military_army_chaos1
+				add_idea = EPM_military_army_chaos2
+			}
+		}
+	}
+	prerequisite = { focus = EMP_empeier_army_allgun }
+}
+focus = {
+	id = EMP_empeier_army_allgun2
+	icon = GFX_focus_SWE_let_fly_all_guns
+	cost = 7
+	x = 11
+	y = 12
+
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+		always = yes
+	}
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { 
+		if = {
+			limit = { has_completed_focus = EMP_empeier_army_allgun1
+		} 
+		
+		remove_ideas = EPM_military_army_chaos2
+
+	}
+		else = {
+			swap_ideas = {
+				remove_idea = EPM_military_army_chaos1
+				add_idea = EPM_military_army_chaos3
+			}
+		}
+	}
+	prerequisite = { focus = EMP_empeier_army_allgun }
+	
+}
+focus = {
+	id = EMP_empeier_army_allgun3
+	icon = GFX_focus_SMB_mountain_guns
+	cost = 7
+	x = 10
+	y = 13
+
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+		always = yes
+	}
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { 
+		if = {
+			limit = { has_completed_focus = EMP_empeier_army_allgun5 }
+		    add_ideas = EPM_military_army_allgun_dig2_2
+		}
+		else_if = {
+			limit ={has_completed_focus = EMP_empeier_army_allgun4 }
+			add_ideas = EPM_military_army_allgun_attack_defence
+		}
+		else_if = {
+			limit ={has_completed_focus = EMP_empeier_army_allgun4 }
+			limit ={has_completed_focus = EMP_empeier_army_allgun5 }
+			add_ideas = EPM_military_army_allgun1
+		}
+		else = {
+			add_ideas = EPM_military_army_allgun_defence1
+		}
+	}
+	prerequisite = { focus = EMP_empeier_army_allgun2 }
+	prerequisite = { focus = EMP_empeier_army_allgun1 }
+}
+focus = {
+	id = EMP_empeier_army_allgun4
+	icon = GFX_focus_SWE_let_fly_all_guns
+	cost = 7
+	x = 12
+	y = 13
+
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+		always = yes
+	}
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { 
+		if = {
+			limit = { has_completed_focus = EMP_empeier_army_allgun5 }
+			add_ideas = EPM_military_army_allgun_dig2_1
+		}
+		else_if = {
+			limit ={has_completed_focus = EMP_empeier_army_allgun3 }
+			add_ideas = EPM_military_army_allgun_attack_defence
+		}
+		else_if = {
+			limit ={has_completed_focus = EMP_empeier_army_allgun3 }
+			limit ={has_completed_focus = EMP_empeier_army_allgun5 }
+			add_ideas = EPM_military_army_allgun1
+		}
+		else = {
+			add_ideas = EPM_military_army_allgun_attack1
+		}
+	
+	}
+	
+	prerequisite = { focus = EMP_empeier_army_allgun2 }
+	prerequisite = { focus = EMP_empeier_army_allgun1 }
+
+
+}
+focus = {
+	id = EMP_empeier_army_allgun5
+	icon = GFX_SOV_far_east_fortification_ccp_2d_sov_compatibility
+	cost = 7
+	x = 14
+	y = 13
+
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+		always = yes
+	}
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { 
+		if = {
+			limit = { has_completed_focus = EMP_empeier_army_allgun4 }
+		}
+		else_if = {
+			limit ={has_completed_focus = EMP_empeier_army_allgun3 }
+			
+		}
+		else_if = {
+			limit ={has_completed_focus = EMP_empeier_army_allgun3 }
+			limit ={has_completed_focus = EMP_empeier_army_allgun4 }
+			
+		}
+		else = {
+			add_ideas = EPM_military_army_allgun_dig1
+		}
+	}
+	prerequisite = { focus = EMP_empeier_army_allgun2 }
+	prerequisite = { focus = EMP_empeier_army_allgun1 }
+}
+focus = {
+	id = EMP_empeier_army_allgun6
+	icon = GFX_SOV_soviet_artillery_ccp_2d_sov_compatibility
+	cost = 7
+	x = 12
+	y = 15
+
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+		always = yes
+	}
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = {  
+
+	}
+	prerequisite = { focus = EMP_empeier_army_allgun5 }
+	prerequisite = { focus = EMP_empeier_army_allgun4 }
+	prerequisite = { focus = EMP_empeier_army_allgun3 }
+}
+focus = {
+	id = EMP_empeier_army_last
+	icon = GFX_SOV_muster_the_old_guard_ccp_2d_sov_compatibility
+	cost = 10
+	x = 16
+	y = 15
+
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+		always = yes
+	}
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { 
+		swap_ideas = {
+			remove_idea = EPM_military_army_allgun1
+			add_idea = EPM_military_army_allgun 
+		}
+		
+	}
+	prerequisite = { focus = EMP_empeier_army_allgun6 focus = EMP_empeier_army_speed6 }
+	
+	
+}
+
+focus = {
+	id = EMP_empeier_airarmy
+	icon = GFX_focus_GER_army
+	cost = 10
+	x = 3
+	y = 11
+
+	ai_will_do = {
+		factor = 10
+	}
+	
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { 
+		air_experience = 30
+	}
+	
+	
+}
+focus = {
+	id = EMP_empeier_airarmy1
+	icon = GFX_focus_GER_army
+	cost = 10
+	x = 4
+	y = 12
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { 
+		if = {
+			limit = { has_completed_focus = EMP_empeier_airarmy2 }
+			add_ideas =  EPM_military_airarmy2_1_1
+		}
+		else = {
+		add_ideas = EPM_military_airarmy2_1
+		}
+	}
+	prerequisite = { focus = EMP_empeier_airarmy }
+	
+}
+focus = {
+	id = EMP_empeier_airarmy2
+	icon = GFX_focus_GER_army
+	cost = 10
+	x = 2
+	y = 12
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { add_equipment_bonus = {
+		name = GER_all_terrain_military_motorcycle
+		bonus = {
+			small_plane_airframe 
+			 = {
+				build_cost_ic = -0.05
+			}
+		}
+	}
+		
+	}
+	prerequisite = { focus = EMP_empeier_airarmy }
+	
+}
+focus = {
+	id = EMP_empeier_airarmy3
+	icon = GFX_focus_GER_army
+	cost = 10
+	x = 3
+	y = 13
+
+	ai_will_do = {
+		factor = 10
+	}
+	
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { 
+	swap_ideas = {
+		remove_idea = EPM_military_airarmy2_1_1
+		add_idea = EPM_military_airarmy3
+	}
+	}
+	prerequisite = { focus = EMP_empeier_airarmy1 }
+	prerequisite = { focus = EMP_empeier_airarmy2 }
+}
+focus = {
+	id = EMP_empeier_airarmy4
+	icon = GFX_focus_GER_army
+	cost = 10
+	x = 2
+	y = 14
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { 
+		if = {
+			limit = { has_completed_focus = EMP_empeier_airarmy5 }
+			add_ideas =  EPM_military_airarmy4
+		}
+		else = {
+		add_ideas = EPM_military_airarmy4_1
+		}
+	}
+	prerequisite = { focus = EMP_empeier_airarmy3 }
+	
+}
+focus = {
+	id = EMP_empeier_airarmy5
+	icon = GFX_focus_GER_army
+	cost = 10
+	x = 4
+	y = 14
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { 
+		add_equipment_bonus = {
+			name = GER_all_terrain_military_motorcycle
+			bonus = {
+				large_plane_airframe  = {
+					build_cost_ic = -0.05
+				}
+			}
+		}
+	
+	}
+	prerequisite = { focus = EMP_empeier_airarmy3 }
+	
+}
+
+focus = {
+	id = EMP_empeier_navy
+	icon = GFX_focus_GER_navy
+	cost = 10
+	x = 10
+	y = 16.5
+
+	ai_will_do = {
+		factor = 10
+	}
+	
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { navy_experience = 30
+	}
+	
+	
+}
+focus = {
+	id = EMP_empeier_navy_biggun
+	icon = GFX_focus_GER_high_seas_fleet
+	cost = 10
+	x = 10
+	y = 18
+
+	ai_will_do = {
+		factor = 10
+	}
+	mutually_exclusive ={ focus = EMP_empeier_navy_wolf }
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { 
+	}
+	prerequisite = { focus = EMP_empeier_navy }
+	
+}
+focus = {
+	id = EMP_empeier_navy_biggun1
+	icon = GFX_goal_generic_construct_naval_dockyard
+	cost = 10
+	x = 8
+	y = 18
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { 
+		add_equipment_bonus = {
+			name = GER_all_terrain_military_motorcycle
+			bonus = {
+				heavy_cruiser_1 =
+					
+				{
+					build_cost_ic = -0.1
+				}
+			}
+		}
+	}
+	prerequisite = { focus = EMP_empeier_navy_biggun }
+	
+}
+focus = {
+	id = EMP_empeier_navy_biggun2
+	icon = GFX_SOV_an_oceangoing_navy_ccp_2d_sov_compatibility
+	cost = 10
+	x = 12
+	y = 18
+
+	ai_will_do = {
+		factor = 10
+	}
+	
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { add_ideas = EPM_military_navy_biggun_bup
+	}
+	prerequisite = { focus = EMP_empeier_navy_biggun }
+	
+}
+focus = {
+	id = EMP_empeier_navy_biggun3
+	icon = GFX_SOV_pc_of_the_ussr_navy_ccp_2d_sov_compatibility
+	cost = 10
+	x = 11
+	y = 19
+
+	ai_will_do = {
+		factor = 10
+	}
+	
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { swap_ideas = {
+		remove_idea = EPM_military_navy_biggun_bup
+		add_idea = EPM_military_navy_biggun_bup1
+	}
+	}
+	prerequisite = { focus = EMP_empeier_navy_biggun2 }
+	
+}
+focus = {
+	id = EMP_empeier_navy_biggun4
+	icon = GFX_focus_GER_panzerschiff
+	cost = 10
+	x = 9
+	y = 19
+
+	ai_will_do = {
+		factor = 10
+	}
+	
+	
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { add_equipment_bonus = {
+		name = GER_all_terrain_military_motorcycle
+		bonus = {
+			modern_battleship =	{
+				build_cost_ic = -0.1
+			}
+		}
+	}
+	}
+	prerequisite = { focus = EMP_empeier_navy_biggun1 }
+	
+}
+focus = {
+	id = EMP_empeier_navy_biggun5
+	icon = GFX_SOV_modernize_the_far_eastern_fleet_ccp_2d_sov_compatibility
+	cost = 10
+	x = 10
+	y = 20
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { swap_ideas = {
+		remove_idea = EPM_military_navy_biggun_cost1
+		remove_idea = EPM_military_navy_biggun_bup1
+		add_idea = EPM_military_navy_biggun
+	}
+	}
+	prerequisite = { focus = EMP_empeier_navy_biggun4 }
+	prerequisite = { focus = EMP_empeier_navy_biggun3 }
+}
+focus = {
+	id = EMP_empeier_navy_wolf
+	icon = GFX_SOV_long_range_raiders_ccp_2d_sov_compatibility
+	cost = 10
+	x = 4
+	y = 18
+
+	ai_will_do = {
+		factor = 10
+	}
+	mutually_exclusive ={ focus = EMP_empeier_navy_biggun }
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { 
+	}
+	prerequisite = { focus = EMP_empeier_navy }
+	
+}
+focus = {
+	id = EMP_empeier_navy_wolf1
+	icon = GFX_focus_generic_cruiser_submarines
+	cost = 10
+	x = 5
+	y = 19
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { add_ideas = EPM_military_wolf_attack1
+	}
+	prerequisite = { focus = EMP_empeier_navy_wolf }
+	
+} 	 	
+focus = {
+	id = EMP_empeier_navy_wolf2
+	icon = GFX_SOV_rebuild_the_far_eastern_fleet_ccp_2d_sov_compatibility
+	cost = 10
+	x = 3
+	y = 19
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { add_ideas = EPM_military_wolf_cost1
+	}
+	prerequisite = { focus = EMP_empeier_navy_wolf }
+	
+}
+focus = {
+	id = EMP_empeier_navy_wolf3
+	icon = GFX_SOV_restoration_and_development_ccp_2d_sov_compatibility
+	cost = 10
+	x = 2
+	y = 18
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { swap_ideas = {
+		remove_idea = EPM_military_wolf_cost1
+		add_idea = EPM_military_wolf_cost2
+	}
+	}
+	prerequisite = { focus = EMP_empeier_navy_wolf2 }
+	
+}
+focus = {
+	id = EMP_empeier_navy_wolf4
+	icon = GFX_goal_generic_navy_anti_submarine
+	cost = 10
+	x = 6
+	y = 18
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { swap_ideas = {
+		remove_idea = EPM_military_wolf_attack1
+		add_idea = EPM_military_wolf_attack2
+	}
+}
+	
+	prerequisite = { focus = EMP_empeier_navy_wolf1 }
+	
+}
+focus = {
+	id = EMP_empeier_navy_wolf5
+	icon = GFX_focus_generic_midget_submarines
+	cost = 10
+	x = 6
+	y = 20
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	available = { has_completed_focus = EMP_grate }
+		completion_reward = { swap_ideas = {
+			remove_idea = EPM_military_wolf_attack2
+			add_idea = EPM_military_wolf_attack3
+		}
+	}
+	prerequisite = { focus = EMP_empeier_navy_wolf }
+	
+}
+focus = {
+	id = EMP_empeier_navy_wolf6
+	icon = GFX_SOV_submarine_warfare_ccp_2d_sov_compatibility
+	cost = 10
+	x = 2
+	y = 20
+
+	ai_will_do = {
+		factor = 10
+	}
+	
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { add_equipment_bonus = {
+		name = GER_all_terrain_military_motorcycle
+		bonus = {
+			submarine = {
+				build_cost_ic = -0.25
+			}
+		}
+	}
+	}
+	prerequisite = { focus = EMP_empeier_navy_wolf }
+	
+}
+focus = {
+	id = EMP_empeier_navy_wolf7
+	icon = GFX_focus_GER_army
+	cost = 10
+	x = 4
+	y = 20
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { swap_ideas = {
+		remove_idea = EPM_military_wolf_cost3
+		remove_idea = EPM_military_wolf_attack3
+		add_idea = EPM_military_wolf 
+	}
+	}
+	prerequisite = { focus = EMP_empeier_navy_wolf5 }
+	prerequisite = { focus = EMP_empeier_navy_wolf6 }
+}
+focus = {
+	id = EMP_empeier_navy_base_attack
+	icon = GFX_goal_generic_navy_carrier
+	cost = 10
+	x = 16
+	y = 18
+
+	ai_will_do = {
+		factor = 10
+	}
+	
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { navy_experience = 30
+}
+	prerequisite = { focus = EMP_empeier_navy }
+	
+}
+focus = { 
+	id = EMP_empeier_navy_base_attack1
+	icon = GFX_focus_NORDIC_mon_selector_navy
+	cost = 10
+	x = 18
+	y = 19
+
+	ai_will_do = {
+		factor = 10
+	}
+	
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { add_ideas = EPM_empire_military_navy_base_attack
+	}
+	prerequisite = { focus = EMP_empeier_navy_base_attack }
+	
+}
+focus = {
+	id = EMP_empeier_navy_base_attack2
+	icon = GFX_focus_NORDIC_mon_capstone_navy
+	cost = 10
+	x = 14.5
+	y = 19
+
+	ai_will_do = {
+		factor = 10
+	}
+	
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { add_equipment_bonus = {
+		name = GER_all_terrain_military_motorcycle
+		bonus = {
+			carrier =  {
+				build_cost_ic = -0.25
+			}
+		}
+	}
+	}
+	prerequisite = { focus = EMP_empeier_navy_base_attack}
+	
+}
+focus = {
+	id = EMP_empeier_navy_base_attack3
+	icon = GFX_goal_generic_navy_cruiser
+	cost = 10
+	x = 16
+	y = 19
+
+	ai_will_do = {
+		factor = 10
+	}
+	available = {
+		always = no
+	}
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { add_tech_bonus = {
+		name = GER_artillery_bombardment
+		bonus = 0.5
+		uses = 2
+		category = cat_ship_light_battery
+	}
+	}
+	prerequisite = { focus = EMP_empeier_navy_base_attack }
+	
+}
+focus = {
+	id = EMP_empeier_navy_base_attack4
+	icon = GFX_goal_generic_navy_doctrines_tactics
+	cost = 10
+	x = 16
+	y = 20
+
+	ai_will_do = {
+		factor = 10
+	}
+	
+	available = { has_completed_focus = EMP_grate }
+	completion_reward = { swap_ideas = {
+		remove_idea = EPM_empire_military_navy_base_attack
+		add_idea = EPM_empire_military_navy_base_attack1
+	}
+	}
+	prerequisite = { focus = EMP_empeier_navy_base_attack1 }
+	prerequisite = { focus = EMP_empeier_navy_base_attack2 }
+	prerequisite = { focus = EMP_empeier_navy_base_attack3 }
+}
+focus = {
+
+	id = EMP_empeier
+
+	icon = GFX_focus_generic_strike_at_democracy1
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	available = {
+			always = no
+		}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	prerequisite = { focus = EMP_grate }
+
+	available_if_capitulated = yes
+
+	mutually_exclusive ={ focus = EMP_three_king }
+
+	x = 45
+
+	y = 2
+
+	
+
+	completion_reward = {
+		add_country_leader_role = {
+			character = EPM_fendia
+				promote_leader = yes
+				country_leader = {
+					ideology = fascism_ideology
+					expire = "1965.1.1.1"
+					traits = { war_profiteer }
+		}
+	}
+	
+	set_popularities = {
+		democratic = 0
+		neutrality = 40
+		fascism = 60
+		communism = 0
+						}
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+			last_election = "1935.12.17"
+			election_frequency = 48
+			long_name = "제국 평민회"
+			name = "평민회"
+		}
+		add_ideas = EPM_empire_nobility
+		
+}
+}
+focus = {
+
+	id = EMP_empeier1
+
+	icon = GFX_focus_generic_conspiracy
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	prerequisite = { focus = EMP_empeier }
+
+	available_if_capitulated = yes
+
+	
+
+	x = 48
+
+	y = 3
+
+	
+
+	completion_reward = {
+
+		retire_character = EPM_lazume_aus_lotia
+		retire_character = EPM_kare_grateq
+		retire_character = EPM_fisumia_fotima
+		retire_character = EPM_daka_gumia
+		retire_character = EPM_nomi_forti
+		
+		
+		
+     }
+}
+focus = {
+
+	id = EMP_empeier2
+
+	icon = GFX_goal_generic_scientific_exchange
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	prerequisite = { focus = EMP_empeier }
+
+	available_if_capitulated = yes
+
+	
+
+	x = 46
+
+	y = 3
+
+	
+
+	completion_reward = {
+		902 ={
+			
+		add_building_construction = {
+			type = landmark_berlin_volkshalle
+			level = 1
+			province = 4972
+		}
+	}
+	add_ideas = EPM_grate_research
+     }
+}
+focus = {
+
+	id = EMP_empeier3
+
+	icon = GFX_goal_generic_intelligence_exchange
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	prerequisite = { focus = EMP_empeier }
+
+	available_if_capitulated = yes
+
+	
+
+	x = 44
+
+	y = 3
+
+	
+
+	completion_reward = {
+		remove_ideas = EPM_ganlow_choas
+
+		add_dynamic_modifier = {
+			modifier = EPM_grate_empire_administration
+		}
+		
+     }
+}
+focus = {
+
+	id = EMP_empeier4
+
+	icon = GFX_SOV_great_commander_ccp_2d_sov_compatibility
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	prerequisite = { focus = EMP_empeier }
+
+	available_if_capitulated = yes
+
+	
+
+	x = 42
+
+	y = 3
+
+	
+
+	completion_reward = {
+
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.15
+		}
+
+     }
+}
+focus = {
+
+	id = EMP_empeier5
+
+	icon = GFX_goal_support_fascism
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	prerequisite = { focus = EMP_empeier4 }
+
+	available_if_capitulated = yes
+
+	
+
+	x = 42
+
+	y = 4.5
+
+	
+
+	
+
+		completion_reward = {
+			
+			add_state_core = 900
+			add_state_core = 558 
+			add_state_core = 776
+		}
+
+
+}
+focus = {
+
+	id = EMP_empeier6
+
+	icon = GFX_goal_generic_intelligence_exchange
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	prerequisite = { focus = EMP_empeier }
+
+	available_if_capitulated = yes
+
+	
+
+	x = 44
+
+	y = 4.5
+
+	
+
+	completion_reward = {
+
+
+
+     }
+}
+focus = {
+
+	id = EMP_empeier7
+
+	icon = GFX_focus_SWE_institute_of_technology
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	prerequisite = { focus = EMP_empeier3 }
+
+	available_if_capitulated = yes
+
+	
+
+	x = 44
+
+	y = 4.5
+
+	
+
+	completion_reward = {
+		custom_effect_tooltip = EMP_empeier7_tt
+
+		add_to_variable = {
+			EPM_war_support = 0.1
+			
+		}
+		add_to_variable = {
+			EPM_stability = 0.1
+			
+		}
+		add_to_variable = {
+			EPM_conscription = 0.05
+			
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.15
+		}
+
+     }
+}
+focus = {
+
+	id = EMP_empeier8
+
+	icon = GFX_goal_generic_position_armies
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	prerequisite = { focus = EMP_empeier2 }
+
+	available_if_capitulated = yes
+
+	
+
+	x = 46
+
+	y = 4.5
+
+	
+
+	completion_reward = {
+		set_province_name = {
+			id = 902
+			name = "로티아"
+		}
+		set_province_name = {
+			id = 10820
+			name = "파슈마"
+		}
+		set_province_name = {
+			id = 2056
+			name = "아토로나"
+		}
+		add_political_power = 100
+
+     }
+}
+focus = {
+
+	id = EMP_empeier9
+
+	icon = GFX_focus_generic_little_entente
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	prerequisite = { focus = EMP_empeier1 }
+
+	available_if_capitulated = yes
+
+	
+
+	x = 48
+
+	y = 4.5
+
+	
+
+	completion_reward = {
+		set_variable = {
+			EPM_army_attack = 0.15
+		}
+		set_variable = {
+			EPM_army_org= 0.15
+		}
+		set_variable = {
+			EPM_army_defence = 0.15
+		}
+		recruit_character = EPM_modia_fu_katia
+	    recruit_character = EPM_our_tamia
+		recruit_character = EPM_share_lamu
+		
+
+     }
+}
+focus = {
+
+	id = EMP_empeier10
+
+	icon = GFX_SOV_liberate_ryutin_ccp_2d_sov_compatibility
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	prerequisite = { focus = EMP_empeier5 }
+
+	available_if_capitulated = yes
+
+	
+
+	x = 42
+
+	y = 5.5
+
+	
+
+	completion_reward = {
+		add_manpower = -8000
+		776 ={
+			set_state_controller_to = EPM
+			add_manpower = -10000
+			
+		}
+		773 ={
+			set_state_controller_to = EPM
+			add_manpower = -10000
+		}
+		add_state_core = 776
+		add_state_core = 773
+
+     }
+}
+focus = {
+
+	id = EMP_empeier11
+
+	icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	prerequisite = { focus = EMP_empeier7 }
+
+	available_if_capitulated = yes
+
+	
+
+	x = 44
+
+	y = 5.5
+
+	
+
+	completion_reward = {
+		remove_dynamic_modifier = {
+			modifier = EPM_grate_empire_administration
+		}
+		
+
+     }
+}
+focus = {
+
+	id = EMP_empeier12
+
+	icon = GFX_focus_generic_strike_at_democracy2
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	prerequisite = { focus = EMP_empeier8 }
+
+	available_if_capitulated = yes
+
+	
+
+	x = 46
+
+	y = 5.5
+
+	
+
+	completion_reward = {
+
+		remove_ideas = EPM_empire_nobility
+
+     }
+}
+focus = {
+
+	id = EMP_empeier13
+
+	icon = GFX_focus_RAJ_indian_gurkhas
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	prerequisite = { focus = EMP_empeier9 }
+
+	available_if_capitulated = yes
+
+	
+
+	x = 48
+
+	y = 5.5
+
+	
+
+	completion_reward = {
+			add_ideas = {
+				EPM_empire_battle
+			}
+			remove_dynamic_modifier = {
+				modifier = EPM_grate_empire_army
+			}
+
+     }
+}
+focus = {
+
+	id = EMP_empeier14
+
+	icon = GFX_SOV_organize_uprisings_in_the_country_ccp_2d_sov_compatibility
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	prerequisite = { focus = EMP_empeier10 }
+	prerequisite = { focus = EMP_empeier11 }
+
+	available_if_capitulated = yes
+
+	
+
+	x = 43
+
+	y = 6.5
+
+	
+
+	completion_reward = {
+
+			add_ideas = EPM_ganlow_feture
+
+     }
+}
+focus = {
+
+	id = EMP_empeier15
+
+	icon = GFX_focus_CONGO_chefs_coutumiers
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	prerequisite = { focus = EMP_empeier12 }
+	prerequisite = { focus = EMP_empeier13 }
+
+	available_if_capitulated = yes
+
+	
+
+	x = 47
+	y = 6.5
+
+	
+
+	completion_reward = {
+
+			add_ideas = EPM_grate_empire_resist
+
+     }
+}
+focus = {
+
+	id = EMP_empeier16
+
+	icon = GFX_focus_tree_empire_bone
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	prerequisite = { focus = EMP_empeier17 }
+	mutually_exclusive ={ focus = EMP_empeier18 }
+	available_if_capitulated = yes
+
+	
+
+	x = 47
+
+	y = 8.5
+
+	
+
+	completion_reward = {
+			swap_ideas = {
+			remove_idea = EPM_grate_empire_resist
+			add_idea = EPM_grate_empire_resist2
+		}
+
+     }
+}
+focus = {
+
+	id = EMP_empeier17
+
+	icon = GFX_focus_tree_empire_leader
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	prerequisite = { focus = EMP_empeier14 }
+	prerequisite = { focus = EMP_empeier15 }
+
+	available_if_capitulated = yes
+
+	
+
+	x = 45
+
+	y = 7.5
+
+	
+
+	completion_reward = {
+		
+		add_country_leader_trait = EPM_grate_bain
+
+     }
+}
+focus = {
+
+	id = EMP_empeier18
+
+	icon = GFX_focus_tree_empire_lie
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	mutually_exclusive ={ focus = EMP_empeier16 }
+	prerequisite = { focus = EMP_empeier17 }
+
+	available_if_capitulated = yes
+
+	
+
+	x = 43
+
+	y = 8.5
+
+	
+
+	completion_reward = {
+		swap_ideas ={
+			remove_idea = EPM_grate_empire_resist
+			add_idea = EPM_grate_empire_resist3
+		}
+
+
+     }
+}
+focus = {
+
+	id = EMP_empeier19
+
+	icon = GFX_SOV_socialist_humanism_ccp_2d_sov_compatibility
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	
+	prerequisite = { focus = EMP_empeier18 }
+	prerequisite = { focus = EMP_empeier16 }
+
+	available_if_capitulated = yes
+
+	
+
+	x = 45
+
+	y = 9.5
+
+	
+
+	completion_reward = {
+		
+		add_research_slot = 1 
+
+     }
+}
+focus = {
+
+	id = EMP_empeier20
+
+	icon = GFX_SOV_call_for_aid_ccp_2d_sov_compatibility
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	
+	prerequisite = { focus = EMP_empeier18 }
+	prerequisite = { focus = EMP_empeier16 }
+
+	available_if_capitulated = yes
+
+	
+
+	x = 46
+
+	y = 10.5
+
+	mutually_exclusive ={ focus = EMP_empeier21 }
+
+	completion_reward = {
+		EPM = {
+				country_event = {
+					id = EMP_event.4
+				}
+			}
+
+     }
+}
+focus = {
+
+	id = EMP_empeier21
+
+	icon = GFX_focus_chi_mission_to_germany
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	
+	prerequisite = { focus = EMP_empeier18 }
+	prerequisite = { focus = EMP_empeier16 }
+
+	available_if_capitulated = yes
+
+	
+
+	x = 44
+
+	y = 10.5
+
+	mutually_exclusive ={ focus = EMP_empeier20 }
+
+	completion_reward = {
+
+		GER = {
+				country_event = {
+					id = EMP_event.5
+				}
+			}
+		
+		add_research_slot = 1 
+
+     }
+}
+focus = {
+
+	id = EMP_wourld_war
+
+	icon = GFX_SOV_the_hands_do_ccp_2d_sov_compatibility
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	available = { has_completed_focus = EMP_empeier19 }
+
+
+	available_if_capitulated = yes
+
+	
+
+	x = 39.5
+
+	y = 15
+
+	
+
+	completion_reward = {
+		
+		add_war_support = 0.15
+     }
+}
+focus = {
+
+	id = EMP_wourld_war1
+
+	icon = GFX_focus_generic_attack_argentina
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	
+	mutually_exclusive ={ focus = EMP_wourld_war5 }
+
+	available_if_capitulated = yes
+	prerequisite = { focus = EMP_wourld_war2 }
+	
+
+	x = 35
+
+	y = 17
+
+	
+
+	completion_reward = {
+		create_wargoal = {
+			target = arg
+			type = independence_wargoal
+		}
+
+
+     }
+}
+focus = {
+
+	id = EMP_wourld_war2
+
+	icon = GFX_focus_generic_attack_brazil
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	prerequisite = { focus = EMP_wourld_war }
+
+
+	available_if_capitulated = yes
+
+	
+
+	x = 36
+
+	y = 16
+
+	
+
+	completion_reward = {
+		create_wargoal = {
+			target = bra
+			type = independence_wargoal
+		}
+		create_wargoal = {
+			target = urg
+			type = independence_wargoal
+		}
+
+
+     }
+}
+focus = {
+
+	id = EMP_wourld_war3
+
+	icon = GFX_focus_attack_france
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	
+	prerequisite = { focus = EMP_wourld_war }
+
+	available_if_capitulated = yes
+
+	
+
+	x = 43
+
+	y = 16
+
+	
+
+	completion_reward = {
+
+		create_wargoal = {
+			target = eng
+			type = independence_wargoal
+		}
+		create_wargoal = {
+			target = fra
+			type = independence_wargoal
+		}
+
+     }
+}
+focus = {
+
+	id = EMP_wourld_war4
+
+	icon = GFX_focus_attack_soviet
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	
+
+
+	available_if_capitulated = yes
+
+	mutually_exclusive ={ focus = EMP_wourld_war6 }
+
+	x = 44
+
+	y = 17
+
+	prerequisite = { focus = EMP_wourld_war3 }
+
+	completion_reward = {
+
+		create_wargoal = {
+			target = sov
+			type = independence_wargoal
+		}
+
+     }
+}
+focus = {
+
+	id = EMP_wourld_war5
+
+	icon = GFX_focus_generic_attack_bolivia
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	prerequisite = { focus = EMP_wourld_war2 }
+	mutually_exclusive ={ focus = EMP_wourld_war1 }
+
+	available_if_capitulated = yes
+
+	
+
+	x = 37
+
+	y = 17
+
+	
+
+	completion_reward = {
+		create_wargoal = {
+			target = par
+			type = independence_wargoal
+		}
+		create_wargoal = {
+			target = bol
+			type = independence_wargoal
+		}
+
+
+
+     }
+}
+focus = {
+
+	id = EMP_wourld_war6
+
+	icon = GFX_focus_generic_attack_usa
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	
+
+
+	available_if_capitulated = yes
+
+	mutually_exclusive ={ focus = EMP_wourld_war4 }
+
+	x = 42
+
+	y = 17
+
+	prerequisite = { focus = EMP_wourld_war3 }
+
+	completion_reward = {
+		create_wargoal = {
+			target = USA
+			type = independence_wargoal
+		}
+
+
+     }
+}
+focus = {
+
+	id = EMP_wourld_war7
+
+	icon = GFX_SOV_naval_infantry_ccp_2d_sov_compatibility
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	
+
+
+	available_if_capitulated = yes
+
+	
+
+	x = 43
+
+	y = 18
+
+	prerequisite = { focus = EMP_wourld_war6 focus = EMP_wourld_war4 }
+	
+	completion_reward = {
+create_wargoal = {
+			target = cub
+			type = independence_wargoal
+		}
+		create_wargoal = {
+			target = hai
+			type = independence_wargoal
+		}
+		create_wargoal = {
+			target = dom
+			type = independence_wargoal
+		}
+
+
+     }
+}
+focus = {
+
+	id = EMP_wourld_war8
+
+	icon = GFX_focus_generic_attack_peru
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	
+
+
+	available_if_capitulated = yes
+
+	
+
+	x = 36
+
+	y = 18
+
+	prerequisite = { focus = EMP_wourld_war5 focus = EMP_wourld_war1 }
+	
+
+	completion_reward = {
+
+		create_wargoal = {
+			target = ecu
+			type = independence_wargoal
+		}
+		create_wargoal = {
+			target = PRU
+			type = independence_wargoal
+		}
+		create_wargoal = {
+			target = col
+			type = independence_wargoal
+		}
+
+     }
+}
+focus = {
+
+	id = EMP_wourld_war9
+
+	icon = GFX_focus_tree_empire_battle
+
+	cost = 5.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+		
+		or ={
+			EPM ={
+			has_full_control_of_state = 361}
+			GER= {
+				has_full_control_of_state = 361
+			}
+		
+		
+			ita ={has_full_control_of_state = 361}
+		
+		
+			jap = {
+				has_full_control_of_state = 361
+			
+		}
+			
+	}
+}
+	
+
+
+	available_if_capitulated = yes
+
+	
+
+	x = 39.5
+
+	y = 19
+
+	prerequisite = { focus = EMP_wourld_war8 }
+	prerequisite = { focus = EMP_wourld_war7 }
+	completion_reward = {
+
+
+
+     }
+}
+focus = {
+
+	id = EMP_wourld_war10
+
+	icon = GFX_SOV_the_hands_do_ccp_2d_sov_compatibility
+
+	cost = 3.00
+
+	ai_will_do = {
+
+		factor = 10
+
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	
+
+
+	available_if_capitulated = yes
+
+	
+
+	x = 39.5
+
+	y = 16.5
+
+	prerequisite = { focus = EMP_wourld_war }
+
+	completion_reward = {
+		create_wargoal = {
+			target = lib
+			type = independence_wargoal
+		}
+      
+
+     }
+}
+}

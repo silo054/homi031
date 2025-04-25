@@ -1,0 +1,246 @@
+	characters = {
+
+	EPM_modia_fu_katia={
+	name = modia_fu_katia
+	portraits = {
+	army = {
+	large = ""
+	}
+	}
+
+	corps_commander = {
+	traits = { war_hero infantry_officer }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+	legacy_id = 0
+	}
+	}
+	EPM_modia_fu_katial={
+		name = modia_fu_katia
+		portraits = {
+		army = {
+		large = ""
+		}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = EPM_blue_bunn
+			ledger = civilian
+			traits = { conservative_nationalist }
+		}
+		corps_commander = {
+		traits = {  infantry_officer }
+		skill = 3
+		attack_skill = 4
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 2
+		legacy_id = 0
+		
+		}
+	}EPM_modia_fu_katil={
+			name = modia_fu_katil
+			portraits = {
+			army = {
+			large = ""
+			}
+			}
+		
+			corps_commander = {
+			traits = {  }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id = 0
+			}
+}EPM_modia_fu_katio={
+				name = modia_fu_katia
+				portraits = {
+				army = {
+				large = ""
+				}
+				}
+				advisor = {
+			slot = political_advisor
+			idea_token = EPM_blue_bunn
+			ledger = civilian
+			traits = { conservative_nationalist }
+				}
+				corps_commander = {
+				traits = {  infantry_officer }
+				skill = 3
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 2
+				legacy_id = 0
+				}
+				
+			}
+					EPM_blue_bunny ={
+					name = blue_bunny
+					portraits ={
+						
+						civilian = {
+						large = "gfx\leader\bunny portrait.dds"
+						small = "gfx\leader\bunny portrait.dds"}
+					}
+					advisor = {
+			slot = political_advisor
+			idea_token = EPM_blue_bunn
+			ledger = civilian
+			traits = { EPM_war_researcher }      # Unspecified cost defaults to 150.
+		}
+			}
+				EPM_suomi={
+				name = suomi
+				portraits = {
+				army = {
+				large = "gfx\leader\big head... portrait.dds"
+				}
+				}
+			
+				corps_commander = {
+				traits = {  infantry_officer }
+				skill = 4
+				attack_skill = 3
+				defense_skill = 5
+				planning_skill = 3
+				logistics_skill = 3
+				legacy_id = 0
+				}
+				}	
+EPM_share_lamu={
+				name = share_lamu
+				portraits = {
+				army = {
+				large = "gfx\leader\gungye. portrait.dds"
+				}
+				}
+			
+				corps_commander = {
+				traits = {  infantry_officer }
+				skill = 4
+				attack_skill = 2
+				defense_skill = 5
+				planning_skill = 1
+				logistics_skill = 5
+				legacy_id = 0
+				}
+				}	
+								EPM_fendia={
+				name = fendia
+				portraits = {
+				army = {
+				large = "gfx\leader\TS Mackensen portrait.dds"
+				}
+				}
+			
+				corps_commander = {
+				traits = {  infantry_officer }
+				skill = 5
+				attack_skill = 10
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+				legacy_id = 0
+				}
+				}	
+			
+				EPM_our_tamia={
+				name = our_tamia
+				portraits = {
+				army = {
+				large = "gfx\leader\do not have jaesu portrait.dds"
+				}
+				}
+			
+				corps_commander = {
+				traits = {  infantry_officer }
+				skill = 4
+				attack_skill = 3
+				defense_skill = 4
+				planning_skill = 3
+				logistics_skill = 5
+				legacy_id = 0
+				}
+				}	EPM_fukumitomia={
+				name = fukumitomia
+				portraits = {
+				army = {
+				large = "gfx\leader\do not have jaesu portrait.dds"
+				}
+				}
+			
+				corps_commander = {
+				traits = {  infantry_officer }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 4
+				legacy_id = 0
+				}
+				}
+				EPM_political ={
+					name = sudidumia
+					portraits ={
+						
+						civilian = {
+						large = "gfx\leader\bunny portrait.dds"
+						small = "gfx\leader\bunny portrait.dds"}
+					}
+					advisor = {
+			slot = political_advisor
+			idea_token = sudidumia
+			ledger = civilian
+			traits = { conservative_nationalist } 
+			     # Unspecified cost defaults to 150.
+				 allowed = {
+					original_tag  = EPM
+				 }
+		}
+					}
+					EPM_political2 ={
+						name = mogakogi
+						portraits ={
+							
+							civilian = {
+							large = "gfx\leader\bunny portrait.dds"
+							small = "gfx\leader\bunny portrait.dds"}
+						}
+						advisor = {
+				slot = political_advisor
+				idea_token = mogakogi
+				ledger = civilian
+				traits = { EPM_political_master2 }  allowed = {
+					original_tag  = EPM
+				 }     # Unspecified cost defaults to 150.
+			}
+						}
+						EPM_political3 ={
+							name = girlsorsi
+							portraits ={
+								
+								civilian = {
+								large = "gfx\leader\bunny portrait.dds"
+								small = "gfx\leader\bunny portrait.dds"}
+							}
+							advisor = {
+					slot = political_advisor
+					idea_token = girlsorsi
+					ledger = civilian
+					traits = { EPM_political_master }    allowed = {
+						original_tag  = EPM
+					 }   # Unspecified cost defaults to 150.
+				}
+							}
+
+				}
+			
+		

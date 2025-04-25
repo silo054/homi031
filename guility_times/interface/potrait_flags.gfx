@@ -1,0 +1,6 @@
+spriteType = {
+	spriteType ={
+		name = "GFX_empire_leasder"
+		texturefile = "gfx\leader\EPM_leader.dds"
+	}
+}

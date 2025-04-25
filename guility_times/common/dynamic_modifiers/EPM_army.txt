@@ -1,0 +1,29 @@
+EPM_grate_empire_army = {
+    icon = officers_purged
+    enable = { always = yes }
+    remove_trigger = {
+        NOT = {
+            has_variable = var_name
+        }
+    }
+    army_attack_factor = EPM_army_attack
+    army_defence_factor = EPM_army_defence
+    experience_gain_army = EPM_army_experience
+    army_org_factor = EPM_army_org
+}
+EPM_grate_empire_administration = {
+    icon = prc_low_popular_support3
+    enable = { always = yes }
+    remove_trigger = {
+        NOT = {
+            has_variable = var_name
+        }
+    }
+    war_support_factor = EPM_war_support 
+	stability_factor = EPM_stability 
+	 conscription_factor = EPM_conscription
+     war_support_factor = -0.15
+     stability_factor = -0.15
+     conscription_factor = -0.08
+    
+}

@@ -1,0 +1,131 @@
+characters = {
+EPM_lazume_aus_lotia={
+name = lazume_aus_lotia
+portraits = {
+army = {
+large = "gfx\leader\EPM_commander2.dds"
+}
+}
+
+corps_commander = {
+traits = { war_hero infantry_officer }
+skill = 3
+attack_skill = 4
+defense_skill = 3
+planning_skill = 3
+logistics_skill = 2
+legacy_id = 0
+}
+}
+
+
+EPM_empire_leader = {
+name = empire_leader
+portraits = {
+civilian = {
+large = "gfx\leader\EPM_leader.dds"}
+}
+country_leader = {
+ideology = oligarchism
+traits = {
+}
+}
+}
+
+
+EPM_kare_grateq={
+name= kare_grateq
+portraits = {
+army = { large = "gfx\leader\blood commander p..dds"
+
+}
+}
+
+corps_commander = {
+traits = { infantry_officer organizer }
+skill = 3
+attack_skill = 4
+defense_skill = 3
+planning_skill = 3
+logistics_skill = 2
+legacy_id = 0
+}
+}
+EPM_fisumia_fotima={
+name = fisumia_fotima
+portraits = {
+army = {
+large = "gfx\leader\EPM_commander3.dds"
+}
+}
+
+corps_commander = {
+traits = {   media_personality skilled_staffer }
+skill = 3
+attack_skill = 4
+defense_skill = 3
+planning_skill = 3
+logistics_skill = 2
+legacy_id = 0
+}
+}
+EPM_won_su_gung={
+name = won_su_gung
+portraits = {
+army = {
+large = "gfx\leader\EPM_commander4.dds"
+}
+}
+
+
+corps_commander = {
+traits = {   media_personality skilled_staffer }
+skill = 3
+attack_skill = 4
+defense_skill = 3
+planning_skill = 3
+logistics_skill = 2
+legacy_id = 0
+}
+}
+
+		EPM_daka_gumia={
+			name = daka_gumia
+			portraits = {
+				army = {
+					large = "gfx\leader\EPM_commander1.dds"
+				}
+				
+			}
+			
+			corps_commander = {
+				traits = {   media_personality skilled_staffer }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 4
+				planning_skill = 2
+				logistics_skill = 5
+
+			}
+		}
+		EPM_nomi_forti={
+			name = nomi_forti
+			portraits = {
+				army = {
+					large = "gfx\leader\nuguseyo portrait.dds"
+				}
+			}
+			
+			
+			corps_commander = {
+				traits = {   media_personality skilled_staffer }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 4
+				planning_skill = 2
+				logistics_skill = 5
+
+			}
+		}
+
+}

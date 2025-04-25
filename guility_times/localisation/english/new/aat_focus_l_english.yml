@@ -1,0 +1,347 @@
+﻿l_english:
+EMP_start: "통신 두절 대응"
+EMP_start_desc: "본토와의 통신이 두절되었습니다. 일단 현재상황을 파악해야만 합니다."
+EMP_continue: "끈끈하게 뭉처야한다."
+EMP_continue_desc: "현재 우리군이 다른세계에 왔다는 사실은 명백합니다. 현재 3개 군단과 1개 함대가 전이해 온것으로 파악되었으니 현재 우리의 영토를 파악하고 지킬 군대가 필요합니다"
+EMP_end: "외출복귀 명령"
+EMP_end_desc: "다행이 우리 주둔지를 비롯한 반경 10km에 마을들이 모두 전이 된것을 확인 되었습니다. 그렇다면 이 마을에 있는 군인원을 모두 복귀시켜야합니다. "
+EMP_real_end: "바다로 향하여"
+EMP_real_end_desc: "현재 내륙에만 틀어밖혀있으면 앞으로의 계획이 한정될 것입니다. 바다로 나아가는 것만이 미래를 여러갈래로 선택할수 있는 "
+EMP_grate: "회의를 시작하지"
+EMP_grate_desc: "급한 문제는 해결했습니다. 이제 앞으로 어떻게 할것인가를 정해야 합니다."
+EMP_three_king: "귀족파"
+EMP_grate_king_desc: "황제의 뜻을 따라서 우리는 모든 인류와 척을 지고 살아야합니다. 또한 일부 개선의 가능성이 있는 자는 아인으로 만들어야합니다."
+EMP_grate_king_start: "해안지역 동화실시"
+EMP_grate_king_start_desc: "우리가 점령한 지역에 인류를 아인화 하여 우리와 동일한 정채성을 만들어야합니다."
+EMP_grate_king_reasearch: "연구소 건설"
+EMP_grate_king_reasearch_desc: "현재 우리에게 연구시설이 시급합니다. 우리는 최대한 빠르게 산업 기술을 복구해야합니다."
+EMP_grate_king_industry: "지하작업장 개방"
+EMP_grate_king_industry_desc: "우리의 일부 주둔지 밑에 비상시 사용하는 작업장이 있습니다. 이를 통해 현재필요한 산업역량을 최대한 끌어 올려야 한다."
+EMP_grate_king_morden: "정상국가화"
+EMP_grate_king_morden_desc: "이제 이지역에서 자리를 잡았으며 빠른 시일내에 이곳에서 돌아가는 것은 불가능하니 이곳에서 국가의 기능을 해야할 것 입니다."
+EMP_grate_king_modi: "행정부 개설"
+EMP_grate_king_modi_desc: "행정부 설립은 군이아닌 국가로써 기능한다는 것을 보여주는 징표가 될것입니다."
+EMP_grate_king_modiew: "지방행정확장"
+EMP_grate_king_modiew_desc: "행정부분이 상당부분 해결되었으나 아직 일부 지방에는 재대로된 행정력이 미치고 있지 않습니다. 이는 장례에 큰 위기로 번질우려가 있으며 이를 빠르게 해결해 나아가야합니다."
+EMP_grate_king_modiek: "미래의 행정"
+EMP_grate_king_modiek_desc: "제국의 행정체계는 마치 수세기는 앞선것 같다는 평가를 받아왔으며 우리는 이를 완벽하게 재현해야만합니다."
+EMP_grate_king_modiea: "군벌화 방지"
+EMP_grate_king_modiea_desc: "각 군단들이 각지역에 주둔하며 각지역의 행정을 맞고 있으며 이것을 방치한다면 "
+EMP_grate_king_army: "관료들 대거 등용"
+EMP_grate_king_army_desc: "행정부설립이후에 군이 행정부에 행정업무를 진행하고 있습니다. 민간에서 관료들을 등용하여서 행정부에 군의 역량을 사용하는 비효율적 상황을 타파하는것에 도움을 줄 수 있습니다." 
+EMP_grate_king_army_desty: "군의 모범"
+EMP_grate_king_army_desty_desc: "현재우리는 군중심으로 사회가 구성되어있습니다. 그러니 이사회를 안정적으로 운영하기 위해서는 군이 대중에게 모범이 되어야 합니다."
+EMP_grate_king_re_empire: " 위대한 제국"
+EMP_grate_king_re_empire_desc: "현재 우리의 국가는 안정되었습니다."
+EMP_grate_king_start_war: "전쟁시작"
+EMP_grate_king_start_war_desc: "강대국으로 성장하기 위해서는 지금의 영토만으로는 부족합니다."
+EMP_grate_king_europe_war: "유럽열강들 제거"
+EMP_grate_king_europe_war_desc: "유럽 열강들은 우리주변의 많은 영토를 보유하고 있으며 이를 획득한다면 우리의 주권을 안정적으로 유지할 수 있을 것입니다."
+EMP_grate_king_asia_war: "아시아로의 확장"
+EMP_grate_king_asia_war_desc: "아시아는 많은 자원과 인력을 보유한 대륙이며 과거 수천년동안 문명의 요람이었습니다. 이곳을 점령하는것은 강대국으로 향하는 필수적 요소일 것입니다."
+EMP_grate_king_america: "신대륙 점령"
+EMP_grate_king_america_desc: "신대륙에 존재하는 자들은 언젠가 우리를 위협할 수 있으며 이를 빠르게 해결해야만 합니다."
+EMP_grate_king_mod: "병력양성소건설"
+
+EMP_grate_king_industry_land: "항구건설"
+
+EMP_grate_king_industry_land2: "군수산업"
+
+EMP_grate_king_industry_land3: "중공업 단지건설"
+
+EMP_grate_king_artiy_less: "대포 재설계"
+
+EMP_grate_king_tank_less: "전차 재설계"
+
+EMP_grate_king_infanty_less: "소총 재설계"
+
+EMP_grate_king_suport_less: "동결건조 도입"
+
+EMP_grate_king_factory: "경공업 투자"
+
+EMP_grate_king_factory3: "경공업 투자2"
+
+EMP_grate_king_factory7: "산업기술 연구소"
+
+EMP_grate_king_factory2: "포장도로 건설"
+
+EMP_grate_king_factory4: "포장도로 건설2"
+
+EMP_grate_king_factory6: "회복된 산업"
+
+EMP_grate_king_re_empire: "전쟁준비"
+
+EMP_grate_army: "제국 육군"
+
+EMP_grate_army1: "장교단 양성"
+
+EMP_grate_king_condition: "영토 통합"
+
+EMP_grate_king_factory9: "제국 건설국"
+
+EMP_grate_king_factory10: "조선산업 건설"
+
+EMP_grate_king_factory8: "철도 건설"
+
+EMP_empeier: "평민파"
+
+EMP_empeier1: "귀족파 숙청청"
+
+EMP_empeier2: "연구 연구소"
+
+EMP_empeier3: "평민들의 행정"
+
+EMP_empeier4: "선전물 개시"
+
+EMP_empeier5: "해안지 정착"
+
+EMP_empeier10: "주변지역 평정"
+
+EMP_empeier14: "사회단결"
+
+EMP_empeier7: "계급=실력"
+
+EMP_empeier8: "새로운 이름"
+
+EMP_empeier12: "귀족파 전멸"
+
+EMP_empeier9: "평민출신 장군"
+
+EMP_empeier13: "황제의 검"
+
+EMP_empeier15: "진압군"
+
+EMP_empeier17: "위대한 총통"
+
+EMP_empeier16: "가혹하게"
+
+EMP_empeier18: "서로를 적으로"
+
+EMP_empeier19: "교육부신설"
+
+EMP_empeier21: "추축국에 가입"
+
+EMP_empeier20: "혼자 선다."
+
+EMP_wourld_war1: "아르헨티나 공격"
+
+EMP_wourld_war: "위대한 성전"
+
+EMP_wourld_war3: "서부열강 제거"
+
+EMP_wourld_war4: "곰 사냥"
+
+EMP_wourld_war6: "독수리 사냥"
+
+EMP_wourld_war7: "카리브 타격"
+
+EMP_wourld_war2: "브라질 공격"
+
+EMP_wourld_war5: "약소국 정리"
+
+EMP_wourld_war1: "태평양으로"
+
+EMP_wourld_war8: "석유 확보"
+
+EMP_wourld_war9: "허상된 신세계"
+
+EMP_grate_king_industry_land1: "미개지개발"
+
+EMP_grate_king_condition1: "아프리카"
+
+EMP_grate_king_condition2: "이베리아"
+
+EMP_grate_king_condition3: "아시아"
+
+EMP_wourld_war10: "라이베리아 정리"
+
+EMP_grate_king_research2: "군사연구소"
+
+EMP_grate_king_land4: "위대한 공업"
+
+EMP_empeier_army: "제국 육군"
+
+EMP_empeier_army_allgun: "화력신봉"
+
+EMP_empeier_army_allgun1: "환경 적응훈련"
+
+EMP_empeier_army_allgun2: "포병전술 재교육"
+
+EMP_empeier_army_allgun3: "튼튼한 포"
+
+EMP_empeier_army_allgun4: "새로운 포탄"
+
+EMP_empeier_army_allgun5: "신속한 참호"
+
+EMP_empeier_army_allgun6: "화력은 옳다."
+
+EMP_empeier_army_speed: "기동전"
+
+EMP_empeier_army_speed1: "환경 적응훈련"
+
+EMP_empeier_army_speed2: "기갑전술 재교육"
+
+EMP_empeier_army_speed3: "전차의 방어"
+
+EMP_empeier_army_speed4: "기동전술"
+
+EMP_empeier_army_speed5: "조준 훈련"
+
+EMP_empeier_army_speed6: "강철의 군대"
+
+EMP_empeier_army_last: "위대한 장교"
+
+EMP_empeier_airarmy: "제국 공군"
+
+EMP_empeier_airarmy1: "방공공용 탄" 
+
+EMP_empeier_airarmy2: "생산기술 개발"
+
+EMP_empeier_airarmy3: "방공 체계강화"
+
+EMP_empeier_airarmy4: "항공기 기동력"
+
+EMP_empeier_airarmy5: "폭격기 재설계"
+
+EMP_empeier_navy: "제국 해군"
+
+EMP_empeier_navy_wolf: "잠수 함대"
+
+EMP_empeier_navy_wolf1: "잠수함 공격"
+
+EMP_empeier_navy_wolf2: "조선 효율성 증대"
+
+EMP_empeier_navy_wolf3: "숙련된 설계능력"
+
+EMP_empeier_navy_wolf4: "어뢰 계량"
+
+EMP_empeier_navy_wolf5: "신형 탐지기"
+
+EMP_empeier_navy_wolf6: "잠수함 재설계"
+
+EMP_empeier_navy_wolf7: "강철늑대"
+
+EMP_empeier_navy_biggun: "거함거포"
+
+EMP_empeier_navy_biggun1: "순양함 재설계"
+
+EMP_empeier_navy_biggun2: "포탄개량"
+
+EMP_empeier_navy_biggun3: "해상에서의 방어"
+
+EMP_empeier_navy_biggun4: "전함 재설계"
+
+EMP_empeier_navy_biggun5: "크고우람하게"
+
+EMP_empeier_navy_base_attack: "함재기의 날렵함"
+
+EMP_empeier11: "신행정"
+
+EMP_grate_king_industry_goverment_policy: "제국 경제학"
+
+EMP_empeier_navy_base_attack3: "경포대연구"
+
+EMP_empeier_navy_base_attack2: "신해군"
+
+EMP_empeier_navy_base_attack1: "건조기술 부활"
+
+EMP_empeier_navy_base_attack4: "떠다니는 공항"
+
+EPM_economy1:0 "건설기술 재발견"
+EPM_economy1_desc:0 "현재 우리는 건설기술을 가진자가 매우적으며 가진 기술도 한정적 입니다. \n 위해서는 군내에 있는 여러 도서들을 이용하여 기술들을 재발굴하고 기술자 육성을 위한 교육제도를 마련해야만 합니다."
+EPM_economy2:0 "기술자 육성"
+EPM_economy2_desc:0 "건설 부문의 문제는 일단락되었으나 생산부문을 처참합니다. \n 다행이 어느정도의 기술자들이 군내에 상시 상주해 있었으나 \n \n 현재 우리는 이 기술자들이 사용할 수 있는 장비와 더불어 기존에 사용하던 네트워크 시스템등을 전혀 사용하지 못하는 상황입니다."
+EPM_economy3:0 "배급제 중단"
+EPM_economy3_desc:0 "생산 부문과 건설부문등 공업적 기반을 다진 우리들은 \n 더이상 베급제라는 경제학적 비효율을 중단할 때가 왔습니다."
+
+
+EMP_event.1:0 "혼란"
+EMP_event.1.title:0 "혼란"
+EMP_event.1.description:0 "갑작스럽게 본토와의 통신이 마비되었습니다. \n 다행이 주변의 다른 일부 주둔군들과의 통신은 원활하게 되고 있는 상황입니다.\n\n 각주둔군들이 각지를 수색한 결과 아마도 지구라는 행성과 매우 유사하다고 합니다. \n 일단 주둔군들의 사령관들끼리 위원회를 구성하기로 하였고 이 위원회는 빠르게 주변상황을 파악하기 시작했습니다. "
+EMP_event.1.a:0 "이런 망할!"
+
+EMP_event.2:0 "피튀기는 설전"
+EMP_event.2.title:0 "피튀기는 설전"
+EMP_event.2.description:0 "현재 군사위원회에서는 평민파와 귀족파가 대립 중 입니다.\n귀족파는  지구에서 생활권확보와 더불어서 지구의 패권국이 되자고 주장하고 있으며\n평민파는 고향인 아스트레아로 돌아갈 방법을 찾아야하며 그것을 위해서는 인간이라는 존재를 말살시켜도 된다고 주장합니다.\n 현재 이들을 타협시키는 것은 사실상 불가능하기에 우리는 보다 나은 어느 한 쪽을 선택해야 합니다."
+EMP_event.2.a:0 "귀족들의 말에 일리가 있다, 새로운 세계에 적응해야 한다.  "
+EMP_event.2.b:0 "망할 귀족 놈들의 주장은 필요없다! 우리는 아스트레아로 돌아갈 것이다."
+
+EMP_event.3:0 "통합"
+EMP_event.3.title:0 "통합"
+EMP_event.3.description:0 "제국의 비밀병기인 아티펙트는 인류를 아인으로 바꿀수있는 무기입니다.\n그러나 현재의 기술력으로는  이를 대량생산하는것은 어렵습니다. \n하지만 이를 사용하지 않으면 앞으로 전세계를 경비할 충분한 인구수를 확보하지 못하게 될 것이며 우리는 무너지게 될 것 입니다. \n결국 우리는 어느지역에 이 아티펙트를 사용할지 결정해야만 합니다."
+EMP_event.3.a:0 "아시아에 아티펙트를 사용한다."
+EMP_event.3.b:0 "유럽에 아티펙트를 사용한다."
+EMP_event.3.c:0 "서남아프리카에 아티펙트를 사용한다."
+EMP_event.3.a.TT: "§Y아시아§! 지역을 통합하기 위한 §G몇 가지 결정§!을 해금할 것입니다."
+EMP_event.3.b.TT: "§Y유럽 지역§!을 통합하기 위한 §G몇 가지 결정§!을 해금할 것입니다."
+EMP_event.3.c.TT: "§Y서남아프리카 지역§!을 통합하기 위한 §G몇 가지 결정§!을 해금할 것입니다."
+
+EMP_event.4:0 "독자체제"
+EMP_event.4.title:0 "독자체제"
+EMP_event.4.description:0 "추축국이라는 자들은 이용가치가 있을 지도 모르지만 그들을 신뢰하는 것은 고양이에게 생선을 맞기는 꼴입니다.  우리가 밑을 것은 우리뿐이며 그것이야 말로 우리의 생존을 위한 행동입니다. \n여러회의 끝에 우리는 제국 지구식민지 방위군 이라는 이름으로 세력을 만들기로 합의 했습니다.  이 이름은 현재의 우리 상태를 매우 잘 표현함과 동시에 앞으로 우리가 아스트레아로 돌아갈것이라는 의지또한 포함되어있는 멋진 이름입니다."
+EMP_event.4.a:0 "제국이여 영원하라"
+
+EMP_event.5:0 "제국군단의 추축국 가입 모색"
+EMP_event.5.title:0 "제국군단의 추축국 가입 모색"
+EMP_event.5.description:0 "제국이라는 자들이 우리 추축국에 합류하고 싶어합니다, 이를 어떻게 해야할까요."
+EMP_event.5.a:0 "환영하네!"
+EMP_event.5.b:0 "거부한다."
+
+empire_leader:0 "군사위원회"
+daka_gumia:0 "다케 구미아아"
+nomi_forti:0 "노미 포티"
+won_su_gung:0 "원수권"
+fisumia_fotima:0 "피수미아 포티머"
+kare_grateq:0 "케일 크레테쿼"
+lazume_aus_lotia:0 "라주미 오로티아"
+modia_fu_katia:0 "무디아 포카니타"
+blue_bunny:0 "캬루"
+suomi:0"수오미아"
+sudidumia:0 "수디우미아"
+EPM_industry_heal:0 "회복된 산업"
+EPM_industry_dead:0 "붕괴된 산업"
+EPM_industry_dead1:0 "무너진 산업"
+EPM_industry_dead2:0 "베급 사회"
+EPM_military_army_chaos:0 "군대내의 혼란"
+EPM_military_army_chaos1:0 "군대내의 혼란"
+EPM_military_army_chaos2:0 "군대내의 혼란"
+EPM_military_army_chaos3:0 "군대내의 혼란"
+EPM_military_army_speed:0 "제국 기동군"
+EPM_military_army_speed_of_speed:0 "제국 기동군"
+EPM_military_army_speed_of_speed1:0 "제국 기동군"
+EPM_military_army_speed_of_speed2:0 "제국 기동군"
+EPM_military_army_speed_of_defence_and_attack:0 "제국 기동군"
+EPM_military_army_speed_of_defence:0 "제국 기동군"
+EPM_military_army_speed_of_defence:0 "제국 기동군"
+EPM_military_army_allgun_dig2_2:0 "제국의 화력"
+EPM_military_army_allgun_dig2_1:0 "제국의 화력"
+EPM_military_army_allgun1:0 "제국의 화력"
+EPM_military_army_allgun_defence1:0 "제국의 화력"
+EPM_military_army_allgun_attack1:0 "제국의 화력"
+EPM_military_army_allgun_attack_defence:0 "제국의 화력"
+EPM_no_country:0 "비국가"
+EPM_condition_decision_category_army: "제국 방위"
+Asia_eliminate_guerrillas: "방공망 설치"
+mogakogi:0 "무가코이"
+girlsorsi:0 "코리시아"
+EPM_condition_decision_category3: "아시아 통합"
+EPM_condition_decision_category1: "서아프리카 통합"
+EPM_condition_decision_category2: "이베리아 통합"
+EPM_empire_building:0 "제국건설회사"
+EPM_empire_military_navy_base_attack:0 "기동함대"
+EPM_grate_empire_resist:0 "제국현병대"
+EPM_bian:0 "위대한 총통"
+EPM_empire_nobility:0 "귀족파의 저항"
+EPM_ganlow_less:0 "관료부족"
+EPM_ganlow_choas:0 "행정붕괴"
+EPM_ganlow_lessofless:0 "지방행정부족"
+EPM_ganlow_feture:0 "미래 행정"
+EPM_grate_army:0 "군의 모범"
+EPM_ganlow_feture:0 "미래의 행정"
+EPM_military_airarmy1:0 "제국 공군"
+EPM_military_airarmy2_1:0 "제국 공군"
+EPM_military_airarmy2_1_1:0 "제국 공군"
+EPM_political_master:0 "화려한 언변사"
+EPM_war_researcher:0 "제국연구원"
+EPM_political_master2:0 "다정한 말투"
+

@@ -1,0 +1,83 @@
+division_template = {
+	name = "Qafar Sefari"
+	division_names_group = AFA_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 2 y = 0}
+		infantry = { x = 2 y = 1}
+		infantry = { x = 2 y = 2}
+		artillery_brigade  =  {x = 3 y = 0}
+		artillery_brigade  =  {x = 3 y = 1}
+		artillery_brigade  =  {x = 3 y = 2}
+
+        
+	}
+	support = {
+        
+    }
+}
+
+units = {
+    division= {
+        name = "Blueskirt Division"
+        location = 4972 # Edinburgh
+        division_template = "Qafar Sefari"
+        start_experience_factor = 0.2
+        start_equipment_factor = 0.3
+    }
+	division= {
+        name = "Blueskirt Division"
+        location = 4972 # Edinburgh
+        division_template = "Qafar Sefari"
+        start_experience_factor = 0.2
+        start_equipment_factor = 0.3
+    }
+	division= {
+        name = "Blueskirt Division"
+        location = 2056 # Edinburgh
+        division_template = "Qafar Sefari"
+        start_experience_factor = 0.2
+        start_equipment_factor = 0.3
+    }
+	division= {
+        name = "Blueskirt Division"
+        location = 10820 # Edinburgh
+        division_template = "Qafar Sefari"
+        start_experience_factor = 0.2
+        start_equipment_factor = 0.3
+    }
+	division= {
+        name = "Blueskirt Division"
+        location = 2025 # Edinburgh
+        division_template = "Qafar Sefari"
+        start_experience_factor = 0.2
+        start_equipment_factor = 0.3
+    }
+    division= {
+        name = "Blueskirt Division"
+        location = 2056 # Edinburgh
+        division_template = "Qafar Sefari"
+        start_experience_factor = 0.2
+        start_equipment_factor = 0.3
+    }
+    division= {
+        name = "Blueskirt Division"
+        location = 4972 # Edinburgh
+        division_template = "Qafar Sefari"
+        start_experience_factor = 0.2
+        start_equipment_factor = 0.3
+    }
+    }
+
+
+
+	
+
+
+### Starting Production ###
+

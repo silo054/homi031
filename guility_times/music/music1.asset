@@ -1,0 +1,5 @@
+music = {
+    name = "Another Day in Kivotos"
+    file = "Another Day in Kivotos.ogg"
+    volume = 0.65
+}

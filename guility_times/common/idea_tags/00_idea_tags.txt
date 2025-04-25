@@ -1,0 +1,25 @@
+idea_categories = {
+	# ledger can be define for idea > idea slot > idea category
+	# first one overrides the others
+	# multiple ledgers can be defined, in that case will show on all
+	# possible values : army, air, navy, military (shows on all military ledgers), civilian, all (shows up everywhere), hidden (does not show up)
+	
+	
+}
+	
+
+
+
+
+slot_ledgers = {
+	materiel_manufacturer = army
+	tank_manufacturer = army
+	aircraft_manufacturer = air
+	tank_manufacturer = air
+	naval_manufacturer = navy
+	naval_manufacturer = navy
+
+	tank_manufacturer = army
+	naval_manufacturer = navy
+	aircraft_manufacturer = air
+}

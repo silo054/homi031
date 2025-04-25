@@ -1,0 +1,461 @@
+EPM_condition_decision_category1 = {
+	africa_eliminate_guerrillas = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = EPM
+		}
+
+		available = {
+		
+		}
+
+		state_target = yes
+
+		targets = {777 274 778 898 556 779 773 780 899 298 700 272 780 701 296 297}
+
+		target_trigger = {
+			OR = {
+				has_completed_focus = EMP_grate_king_condition2
+			}
+			FROM = {
+				is_owned_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+
+		cost = 40
+
+		fire_only_once = yes
+
+		days_remove = 70
+
+		ai_will_do = {
+			base = 200
+		}
+
+		modifier = {
+			weekly_manpower = -300
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = EMP_grate_king_condition2
+			}
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -2000
+			}
+			army_experience = -10
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+}
+EPM_condition_decision_category2 = {
+
+	SPR_eliminate_guerrillas = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = EPM
+		}
+
+		available = {
+			
+		}
+
+		state_target = yes
+
+		targets = { 41 112 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 788 789 790 791 792 793 794 795 290 806 31}
+
+		target_trigger = {
+			OR = {
+				has_completed_focus = EMP_grate_king_condition2
+			}
+			FROM = {
+				is_owned_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+
+		cost = 40
+
+		fire_only_once = yes
+
+		days_remove = 70
+
+		ai_will_do = {
+			base = 200
+		}
+
+		modifier = {
+			weekly_manpower = -300
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = EMP_grate_king_condition2
+			}
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -2000
+			}
+			army_experience = -10
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+}
+EPM_condition_decision_category3 ={
+	Asia_eliminate_guerrillas = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = EPM
+		}
+
+		available = {
+			
+		}
+
+		state_target = yes
+
+		targets = { 524 526 591 645 528 530 529 531 532 535 282 543 533}
+
+		target_trigger = {
+			OR = {
+				has_completed_focus = EMP_grate_king_condition2
+			}
+			FROM = {
+				is_owned_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+
+		cost = 40
+
+		fire_only_once = yes
+
+		days_remove = 70
+
+		ai_will_do = {
+			base = 200
+		}
+
+		modifier = {
+			weekly_manpower = -300
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = EMP_grate_king_condition2
+			}
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -2000
+			}
+			army_experience = -10
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+}EPM_condition_decision_category_army = {
+	icon = GFX_decision_category_generic
+	army_eliminate_guerrillas = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = EPM
+		}
+
+		available = {
+			
+		}
+
+		state_target = yes
+
+		targets = { 902 901 781 }
+
+		target_trigger = {
+			has_completed_focus = EMP_empeier_army
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 70
+
+		ai_will_do = {
+			base = 200
+		}
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = EMP_grate_king_condition2
+			}
+		}
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			random_core_state = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+				}
+			}
+			
+		}
+	}	
+	army_eliminate_guerrillas2 = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = EPM
+		}
+
+		available = {
+			
+		}
+
+		state_target = yes
+
+		targets = { 902 901 781 }
+
+		target_trigger = {
+			has_completed_focus = EMP_empeier_army
+		}
+
+		cost = 150
+
+		fire_only_once = yes
+
+		days_remove = 120
+
+		ai_will_do = {
+			base = 200
+		}
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = EMP_grate_king_condition2
+			}
+		}
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			random_state = {
+				add_building_construction = {
+					type = civilian_factory
+					level = 3
+				}
+			}
+			random_state = {
+				add_building_construction = {
+					type = civilian_factory
+					level = 3
+				}
+			}
+		}
+	}	
+	army_eliminate_guerrillas3 = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = EPM
+		}
+
+		available = {
+			
+		}
+
+		state_target = yes
+
+		targets = { 558 900 }
+
+		target_trigger = {
+			has_completed_focus = EMP_empeier_army
+		}
+
+		cost = 150
+
+		fire_only_once = yes
+
+		days_remove = 120
+
+		ai_will_do = {
+			base = 200
+		}
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = EMP_grate_king_condition2
+			}
+		}
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+		 
+		}
+	}	
+	visible_when_empty = yes
+}
+	EPM_condition_decision_category_economy ={
+	EPM_economy1 = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = EPM
+		}
+
+		available = {
+			
+		}
+
+		
+
+	
+
+		target_trigger = {
+			
+		}
+
+		cost = 40
+
+		fire_only_once = yes
+
+		days_remove = 70
+
+		ai_will_do = {
+			base = 200
+		}
+
+		modifier = {
+			weekly_manpower = -300
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = EMP_grate_king_condition2
+			}
+		}
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			swap_ideas ={
+				remove_idea = EPM_industry_dead
+				add_idea = EPM_industry_dead2
+			}
+		}
+	}
+	EPM_economy2 = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = EPM
+		}
+
+		available = {
+			
+		}
+
+		
+
+	
+
+		target_trigger = {
+			
+		}
+
+		cost = 40
+
+		fire_only_once = yes
+
+		days_remove = 70
+
+		ai_will_do = {
+			base = 200
+		}
+
+		modifier = {
+			weekly_manpower = -300
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = EMP_grate_king_condition2
+			}
+		}
+
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			swap_ideas ={
+				remove_idea = EPM_industry_dead2
+				add_idea = EPM_industry_dead3
+			}
+		}
+	}
+}
