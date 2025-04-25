@@ -5,10 +5,5 @@ technology_categories = {
 }
 
 technology_folders = {
- magic_industry = {
-	ledger = civilian
- }
- magic_infantry ={
-	ledger = army
- }
+
 }

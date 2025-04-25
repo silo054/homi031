@@ -213,7 +213,12 @@ technology_folders = {
 	electronics_folder = {
 		ledger = civilian
 	}
-	
+	magic_industry = {
+		ledger = civilian
+	 }
+	 magic_infantry ={
+		ledger = army
+	 }
 }
 
  
