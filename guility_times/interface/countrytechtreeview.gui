@@ -3827,6 +3827,15 @@ guiTypes = {
 				frame = 1
 				clicksound = ui_research_tab_naval
 			}
+			#모드 연구탭탭
+			buttonType = {
+				name = "magic_infantry_folder_tab"
+				position = { x = 22 y = 0 }
+				quadTextureSprite = ""
+				frame = 1
+				clicksound = click_default
+			}
+#모드 연구탭탭
 			buttonType = {
 				name = "mtgnavalfolder_tab"
 				position = { x = 378 y = 0 }
@@ -6425,13 +6434,6 @@ guiTypes = {
 		background = {
 			name = "Background"
 			quadTextureSprite ="GFX_tiled_window_2b_border"
-		}
-		buttonType = {
-			name = "magic_infantry_folder_tab"
-			position = { x = 22 y = 0 }
-			quadTextureSprite = ""
-			frame = 1
-			clicksound = click_default
 		}
 		iconType = {
 			name ="my_techtree_bg"
